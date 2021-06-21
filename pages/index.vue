@@ -1,36 +1,25 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        ditobuwono-nuxt
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <TheNav />
+    <PageMain />
+    <PageAbout id="about-section" />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+import TheNav from "../components/TheNav.vue";
+import PageMain from "./PageMain.vue";
+import PageAbout from "./PageAbout.vue";
 
-export default Vue.extend({})
+export default Vue.extend({
+  name: "App",
+  components: {
+    TheNav,
+    PageMain,
+    PageAbout,
+  }
+});
 </script>
 
 <style>
@@ -39,42 +28,29 @@ export default Vue.extend({})
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+
+html {
+  background: rgb(255, 255, 255);
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+body {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgb(231, 231, 231) 20%,
+    rgb(233, 233, 233) 100%
+  );
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+#app {
+  font-family: "Open Sans", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #262626;
 }
-
-.links {
-  padding-top: 15px;
+.grayscale {
+  -webkit-filter: grayscale(25%);
+  filter: grayscale(25%);
 }
 </style>

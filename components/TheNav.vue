@@ -2,17 +2,21 @@
   <header id="header" class="sticky w-full top-0 z-20 header-portfolio">
     <TheNotification />
     <div
-      class="flex justify-between text-gray-dito font-cormorant font-medium px-6 md:px-12 pt-4 md:pt-8"
+      class="
+        flex
+        justify-between
+        text-gray-dito
+        font-cormorant font-medium
+        px-6
+        md:px-12
+        pt-4
+        md:pt-8
+      "
     >
-      <div>
-        <h1
-          class="flex md:text-2xl cursor-pointer opacity-90"
-          v-on:click="goTo('#home')"
-        >
-          <div class="font-black">DITO</div>
-          <div class="font-base">BUWONO</div>
-        </h1>
-      </div>
+      <NuxtLink to="/" class="flex md:text-2xl cursor-pointer opacity-90">
+        <div class="font-black">DITO</div>
+        <div class="font-base">BUWONO</div>
+      </NuxtLink>
       <div
         class="nav-burger z-10 right-6 sm:hidden"
         v-on:click="activeSidebar = !activeSidebar"
@@ -33,24 +37,18 @@
         v-bind:class="[activeSidebar ? 'w-full' : 'w-0']"
       >
         <div class="text-3xl sm:text-lg sm:flex">
-          <p
-            class="navline ml-8 my-4 sm:my-0"
-            v-on:click="goTo('#filmography')"
-          >
+          <NuxtLink to="/filmography" class="navline ml-8 my-4 sm:my-0">
             Films
-          </p>
-          <p
-            class="navline ml-8 my-4 sm:my-0"
-            v-on:click="goTo('#publications')"
-          >
+          </NuxtLink>
+          <NuxtLink to="/books" class="navline ml-8 my-4 sm:my-0">
+            Books
+          </NuxtLink>
+          <!-- <NuxtLink to="/" class="navline ml-8 my-4 sm:my-0">
             Publications
-          </p>
-          <p class="navline ml-8 my-4 sm:my-0" v-on:click="goTo('#mixtapes')">
-            Mixtapes
-          </p>
-          <p class="navline ml-8 my-4 sm:my-0" v-on:click="goTo('#talks')">
-            Podcasts
-          </p>
+          </NuxtLink> -->
+          <NuxtLink to="/otherworks" class="navline ml-8 my-4 sm:my-0">
+            Other Works
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -70,30 +68,40 @@ export default Vue.extend({
   name: "TheNav",
   props: ["isMain"],
   components: {
-    TheNotification
+    TheNotification,
   },
   data() {
     return {
-      activeSidebar: false
+      activeSidebar: false,
     };
   },
   methods: {
-    goTo: function(destination: string) {
+    goTo: function (destination: string) {
       this.activeSidebar = false;
       gsap.to(window, {
         duration: 2,
         scrollTo: {
           y: destination,
-          offsetY: 150
+          offsetY: 150,
         },
-        ease: "power2"
+        ease: "power2",
       });
-    }
-  }
+    },
+  },
 });
 </script>
 
 <style scoped>
+.sidebar {
+  @apply absolute h-screen bg-gray-ivory bg-opacity-95 overflow-hidden right-0 top-0 flex items-center;
+}
+
+@screen sm {
+  .desktopbar {
+    @apply h-auto static bg-transparent block;
+  }
+}
+
 header {
   transition: all 0.4s ease-in-out;
 }

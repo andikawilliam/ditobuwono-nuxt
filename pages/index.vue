@@ -1,24 +1,25 @@
 <template>
-  <div>
-    <TheNav />
-    <PageMain />
-    <PageAbout id="about-section" />
-  </div>
+  <Main>
+    <Home />
+    <About id="about-section" />
+  </Main>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
+import Main from "./Main.vue";
 import TheNav from "../components/TheNav.vue";
-import PageMain from "./PageMain.vue";
-import PageAbout from "./PageAbout.vue";
+import Home from "./Home.vue";
+import About from "./About.vue";
 
 export default Vue.extend({
   name: "App",
   components: {
     TheNav,
-    PageMain,
-    PageAbout,
-  }
+    Main,
+    Home,
+    About,
+  },
 });
 </script>
 

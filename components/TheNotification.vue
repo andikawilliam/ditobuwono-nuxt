@@ -2,7 +2,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div
     id="notification"
-    class="bg-light-gray-dito font-open-sans"
+    class="font-open-sans"
     v-show="notifState && notifText"
   >
     <div class="max-w-8xl mx-auto py-3 px-3 sm:px-6 lg:px-10">
@@ -38,11 +38,34 @@
           </p>
         </div>
         <div
-          class="order-3 mt-2 flex-shrink-0 w-full hidden sm:order-2 sm:mt-0 sm:w-auto md:inline"
+          class="
+            order-3
+            mt-2
+            flex-shrink-0
+            w-full
+            hidden
+            sm:order-2
+            sm:mt-0
+            sm:w-auto
+            md:inline
+          "
         >
           <a
             :href="notifLink"
-            class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium bg-white hover:bg-gray-50"
+            class="
+              flex
+              items-center
+              justify-center
+              px-4
+              py-2
+              border border-transparent
+              rounded-md
+              shadow-sm
+              text-sm
+              font-medium
+              bg-white
+              hover:bg-gray-50
+            "
           >
             Get it now
           </a>
@@ -50,7 +73,16 @@
         <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
           <button
             type="button"
-            class="-mr-1 flex p-2 rounded-md hover:bg-light-gray-dito focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
+            class="
+              -mr-1
+              flex
+              p-2
+              rounded-md
+              hover:opacity-50
+              focus:outline-none
+              focus:ring-2 focus:ring-white
+              sm:-mr-2
+            "
             v-on:click="closeNotification"
           >
             <span class="sr-only">Dismiss</span>
@@ -90,14 +122,14 @@ export default Vue.extend({
         "Because the End Is Really
         the Beginning" book is available now!
       `,
-      notifLink: "https://linktr.ee/EndIsBeginning"
+      notifLink: "https://linktr.ee/EndIsBeginning",
     };
   },
   methods: {
     closeNotification() {
       this.notifState = false;
-    }
-  }
+    },
+  },
 });
 </script>
 

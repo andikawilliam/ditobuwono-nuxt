@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pt-16 pb-28 md:pt-16 md:pb-40 lg:pt-40 lg:pb-24 xl:pt-48"
+    class="pb-28 pt-12 md:pt-16 md:pb-40 lg:pt-24 lg:pb-24 xl:pt-32"
     id="home"
   >
     <div class="flex px-6 md:px-24">
@@ -14,10 +14,10 @@
           </p>
           <p class="main-text">He is based in Jakarta, Indonesia.</p>
         </div>
-        <font-awesome-icon
+        <!-- <font-awesome-icon
           class="text-lg sm:text-xl lg:text-32xl down-notice animate-bounce"
           :icon="['fas', 'chevron-down']"
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -26,7 +26,6 @@
 <script lang="ts">
 import Vue from "vue";
 
-import { TimelineMax } from "gsap";
 import { gsap } from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import TextPlugin from "gsap/TextPlugin";
@@ -34,16 +33,17 @@ import TextPlugin from "gsap/TextPlugin";
 gsap.registerPlugin(ScrollToPlugin, TextPlugin);
 
 let offsetScroll = 220;
-const isMobile = window.matchMedia("only screen and (max-width: 760px)")
-  .matches;
+const isMobile = window.matchMedia(
+  "only screen and (max-width: 760px)"
+).matches;
 if (isMobile) {
   offsetScroll = 150;
 }
 
 export default Vue.extend({
-  name: "PageMain",
+  name: "Home",
   mounted() {
-    const tl = new TimelineMax();
+    const tl = gsap.timeline();
     tl.fromTo(
       ".main-text",
       { autoAlpha: 0, y: 40 },
@@ -61,9 +61,9 @@ export default Vue.extend({
       yoyo: true,
       text: {
         value: textArr[index],
-        delimiter: ""
+        delimiter: "",
       },
-      ease: "ease.in"
+      ease: "ease.in",
     });
 
     const getKeyFrames = () => {
@@ -79,7 +79,7 @@ export default Vue.extend({
     tl1.to(".text-typed", {
       delay: 1.5,
       keyframes: getKeyFrames(),
-      repeat: -1
+      repeat: -1,
     });
 
     //cursor logic
@@ -94,23 +94,23 @@ export default Vue.extend({
         { "--typeCursorOpacity": 1, duration: 0, delay: 0.55 },
         { "--typeCursorOpacity": 0, duration: 0, delay: 0.55 },
         { "--typeCursorOpacity": 1, duration: 0, delay: 0.55 },
-        { "--typeCursorOpacity": 1, duration: 1.5, delay: 0 }
+        { "--typeCursorOpacity": 1, duration: 1.5, delay: 0 },
       ],
-      repeat: -1
+      repeat: -1,
     });
   },
   methods: {
-    goTo: function(destination: string) {
+    goTo: function (destination: string) {
       gsap.to(window, {
         duration: 2,
         scrollTo: {
           y: destination,
-          offsetY: offsetScroll
+          offsetY: offsetScroll,
         },
-        ease: "power2"
+        ease: "power2",
       });
-    }
-  }
+    },
+  },
 });
 </script>
 

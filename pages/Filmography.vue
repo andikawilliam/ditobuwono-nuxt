@@ -23,8 +23,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-// import TheNav from "../components/TheNav.vue";
-import Main from "./Main.vue";
+import Main from "./Main/Main.vue";
 import PortfolioHeading from "../components/PortfolioHeading.vue";
 import PortfolioDescription from "../components/PortfolioDescription.vue";
 

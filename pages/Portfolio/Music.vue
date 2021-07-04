@@ -79,7 +79,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-import PortfolioHeading from "../components/PortfolioHeading.vue";
+import PortfolioHeading from "../../components/PortfolioHeading.vue";
 
 export default Vue.extend({
   name: "Music",

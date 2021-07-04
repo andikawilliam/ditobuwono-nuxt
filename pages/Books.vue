@@ -52,7 +52,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Main from "./Main.vue";
+import Main from "./Main/Main.vue";
 import PortfolioHeading from "../components/PortfolioHeading.vue";
 
 export default Vue.extend({

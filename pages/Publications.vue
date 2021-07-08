@@ -1,12 +1,23 @@
 <template>
   <Main>
     <div class="relative px-8 md:px-20 lg:px-20 pb-40">
-      <PortfolioHeading :title="title" :description="description"/>
-      <div class="text-center text-gray-600 underline lg:w-1/2 mx-auto">
-        <div v-for="article in whiteboard" :key="article.title" class="py-2">
-          <a :href="article.link">
-            {{ article.title }}
-          </a>
+      <div class="text-center lg:w-1/2 mx-auto">
+        <div class="font-bold no-underline text-gray-dito">Whiteboardjournal</div>
+        <div class="text-gray-600 underline lg:w-1/2 mx-auto">
+          <div v-for="article in whiteboard" :key="article.title" class="py-2">
+            <a :href="article.link">
+              {{ article.title }}
+            </a>
+          </div>
+        </div>
+
+        <div class="font-bold no-underline text-gray-dito mt-12">Issuu</div>
+        <div class="text-gray-600 underline lg:w-1/2 mx-auto">
+          <div v-for="article in issuu" :key="article.title" class="py-2">
+            <a :href="article.link">
+              {{ article.title }}
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -16,17 +27,14 @@
 <script lang="ts">
 import Vue from 'vue';
 import Main from './Main/Main.vue';
-import PortfolioHeading from "../components/PortfolioHeading.vue";
 
 export default Vue.extend({
   name: "Publications",
   components: {
     Main,
-    PortfolioHeading,
   },
   data: function () {
     return {
-      title: "publications",
       whiteboard: [
         {
           title: "Database Ketersediaan Oksigen, Hingga Pendampingan Isolasi Mandiri, Kami Merangkum Inisiatif Warga untuk Membantu Kita Menghadapi Pandemi",
@@ -75,6 +83,16 @@ export default Vue.extend({
         {
           title: "Di Season Terbaru “Master of None”, Aziz Ansari Semakin Berani Bereksperimen",
           link: "https://www.whiteboardjournal.com/ideas/film/di-season-terbaru-masters-of-none-aziz-ansari-semakin-berani-bereksperimen/"
+        },
+      ],
+      issuu: [
+        {
+          title: "Mati Lampu vol4",
+          link: "https://issuu.com/matilampu/docs/mati_lampu_vol4_7f301e70bf19a9"
+        },
+        {
+          title: "Kaput",
+          link: "https://issuu.com/haninditobuwono9413/docs/kaput_rev"
         },
       ]
     }

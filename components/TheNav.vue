@@ -37,17 +37,8 @@
         v-bind:class="[activeSidebar ? 'w-full' : 'w-0']"
       >
         <div class="text-3xl sm:text-lg sm:flex">
-          <NuxtLink to="/filmography" class="navline ml-8 my-4 sm:my-0">
-            Films
-          </NuxtLink>
-          <NuxtLink to="/books" class="navline ml-8 my-4 sm:my-0">
-            Books
-          </NuxtLink>
-          <!-- <NuxtLink to="/" class="navline ml-8 my-4 sm:my-0">
-            Publications
-          </NuxtLink> -->
-          <NuxtLink to="/otherworks" class="navline ml-8 my-4 sm:my-0">
-            Other Works
+          <NuxtLink v-for="menu in menus" :key="menu.text" :to="menu.to" class="navline ml-8 my-4 sm:my-0">
+            {{ menu.text }}
           </NuxtLink>
         </div>
       </div>
@@ -73,6 +64,24 @@ export default Vue.extend({
   data() {
     return {
       activeSidebar: false,
+      menus: [
+        {
+          to: '/filmography',
+          text: 'Films',
+        },
+        {
+          to: '/books',
+          text: 'Books',
+        },
+        {
+          to: '/publications',
+          text: 'Publications',
+        },
+        {
+          to: '/otherworks',
+          text: 'Other Works',
+        },
+      ]
     };
   },
   methods: {

@@ -25,7 +25,6 @@
 import Vue from "vue";
 import Main from "./Main/Main.vue";
 import PortfolioHeading from "../components/PortfolioHeading.vue";
-import PortfolioDescription from "../components/PortfolioDescription.vue";
 
 import FilmWork from "../components/FilmWork.vue";
 
@@ -36,7 +35,6 @@ export default Vue.extend({
     Main,
     PortfolioHeading,
     FilmWork,
-    PortfolioDescription,
   },
   data: function () {
     return {

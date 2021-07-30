@@ -5,22 +5,21 @@
   </Main>
 </template>
 
-<style scoped>
-
-</style>
-
 <script lang="ts">
-import Vue from 'vue';
-import Main from './Main/Main.vue'
-import Music from './Portfolio/Music.vue';
-import Podcast from './Portfolio/Podcast.vue'
+import Vue from "vue";
+import Main from "./Main/Main.vue";
+import Music from "./Portfolio/Music.vue";
+import Podcast from "./Portfolio/Podcast.vue";
 
 export default Vue.extend({
   name: "OtherWorks",
   components: {
     Main,
     Music,
-    Podcast
+    Podcast,
   },
-})
+});
 </script>
+
+<style scoped>
+</style>

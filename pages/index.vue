@@ -6,19 +6,19 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Main from "./Main/Main.vue";
-import Home from "./Home/Home.vue";
-import About from "./Home/About.vue";
+import Vue from 'vue'
+import Main from './Main/Main.vue'
+import Home from './Home/Home.vue'
+import About from './Home/About.vue'
 
 export default Vue.extend({
-  name: "App",
+  name: 'App',
   components: {
     Main,
     Home,
-    About,
-  },
-});
+    About
+  }
+})
 </script>
 
 <style>

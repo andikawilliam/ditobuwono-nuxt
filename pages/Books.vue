@@ -6,16 +6,16 @@
         class="mx-auto sm:grid sm:grid-cols-3 lg:w-4/5 sm:gap-2 md:gap-12 lg:gap-16 xl:gap-24"
       >
         <div
-          class="lg:row-span-1 lg:col-span-1 px-0 mb-32 sm:my-0"
           v-for="book in books"
           :key="book.id"
+          class="lg:row-span-1 lg:col-span-1 px-0 mb-32 sm:my-0"
         >
           <a :href="book.src">
             <div class="cover-container relative grayscale mx-auto lg:px-4">
               <img
                 :src="book.cover"
                 class="mx-auto publication-cover w-full grayscale"
-              />
+              >
             </div>
           </a>
           <div class="lg:px-2 pt-6 lg:pt-4">
@@ -27,14 +27,14 @@
               v-html="book.description"
             />
             <div
-              class="description-text text-center font-light italic pb-4"
               v-if="book.accolades"
+              class="description-text text-center font-light italic pb-4"
             >
               <p v-for="accolade in book.accolades" :key="accolade">
                 {{ accolade }}
               </p>
             </div>
-            <div class="flex justify-center" v-if="book.orderLink">
+            <div v-if="book.orderLink" class="flex justify-center">
               <button
                 class="order-text button mx-auto p-1 lg:px-4 underline rounded-lg hover:bg-white hover:text-black"
               >
@@ -51,19 +51,19 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Main from "./Main/Main.vue";
-import PortfolioHeading from "../components/PortfolioHeading.vue";
+import Vue from 'vue'
+import PortfolioHeading from '../components/PortfolioHeading.vue'
+import Main from './Main/Main.vue'
 
 export default Vue.extend({
-  name: "Books",
+  name: 'Books',
   components: {
     Main,
     PortfolioHeading
   },
-  data: function() {
+  data () {
     return {
-      title: "books",
+      title: 'books',
       description: `
         Dito started writing short stories from junior high school.
         Since then he has been happy to write whenever he has free time, with some
@@ -77,9 +77,9 @@ export default Vue.extend({
       books: [
         {
           id: 1,
-          src: "https://linktr.ee/EndIsBeginning",
-          cover: require(`~/assets/cover-the-end.webp`),
-          title: "Because the End Is Really the Beginning",
+          src: 'https://linktr.ee/EndIsBeginning',
+          cover: require('~/assets/cover-the-end.webp'),
+          title: 'Because the End Is Really the Beginning',
           description: `
           Dito wrote a short story book about regrets.
           Where according to him, a mistake will remain forever
@@ -92,16 +92,16 @@ export default Vue.extend({
           `,
           accolades: [
             "Editors' Choice at bukuindie.com",
-            "Book Talks at “Bedah Buku Madania“"
+            'Book Talks at “Bedah Buku Madania“'
           ],
-          orderLink: "https://linktr.ee/EndIsBeginning"
+          orderLink: 'https://linktr.ee/EndIsBeginning'
         },
         {
           id: 2,
           src:
-            "https://issuu.com/matilampu/docs/mati_lampu_vol4_7f301e70bf19a9",
-          cover: require(`~/assets/cover-toleransi.webp`),
-          title: "Mati Lampu Vol.4: Toleransi",
+            'https://issuu.com/matilampu/docs/mati_lampu_vol4_7f301e70bf19a9',
+          cover: require('~/assets/cover-toleransi.webp'),
+          title: 'Mati Lampu Vol.4: Toleransi',
           description: `
             Became a contributor to the fourth volume of “Mati Lampu” zine.
             This zine raises about tolerance, where it is moved to see a "reality of
@@ -111,9 +111,9 @@ export default Vue.extend({
         },
         {
           id: 3,
-          src: "https://issuu.com/haninditobuwono9413/docs/kaput_rev",
-          cover: require(`~/assets/cover-kaput.webp`),
-          title: "Kaput",
+          src: 'https://issuu.com/haninditobuwono9413/docs/kaput_rev',
+          cover: require('~/assets/cover-kaput.webp'),
+          title: 'Kaput',
           description: `
             Kaput is one of Dito’s cathartic medium in the midst of this pandemic. 
             Where he tries to maintain his sanity with a choice of songs, 
@@ -121,9 +121,9 @@ export default Vue.extend({
           `
         }
       ]
-    };
+    }
   }
-});
+})
 </script>
 
 <style scoped>

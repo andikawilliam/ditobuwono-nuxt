@@ -6,14 +6,14 @@
         <div class="sm:w-2/3 md:w-4/5 lg:w-1/2 mx-auto overflow-hidden">
           <FilmWork
             v-for="film in films"
+            :id="film.id"
             :key="film.id"
-            v-bind:id="film.id"
-            v-bind:image="film.image"
-            v-bind:title="film.title"
-            v-bind:type="film.type"
-            v-bind:role="film.role"
-            v-bind:accolades="film.accolades"
-            v-bind:href="film.href"
+            :image="film.image"
+            :title="film.title"
+            :type="film.type"
+            :role="film.role"
+            :accolades="film.accolades"
+            :href="film.href"
           />
         </div>
       </div>
@@ -22,23 +22,23 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Main from "./Main/Main.vue";
-import PortfolioHeading from "../components/PortfolioHeading.vue";
+import Vue from 'vue'
+import PortfolioHeading from '../components/PortfolioHeading.vue'
 
-import FilmWork from "../components/FilmWork.vue";
+import FilmWork from '../components/FilmWork.vue'
+import Main from './Main/Main.vue'
 
 export default Vue.extend({
-  name: "filmography",
+  name: 'Filmography',
   components: {
     // TheNav,
     Main,
     PortfolioHeading,
-    FilmWork,
+    FilmWork
   },
-  data: function () {
+  data () {
     return {
-      title: "filmography",
+      title: 'filmography',
       description: `
         Dito's passion for cinema has existed since early childhood influenced  
         by his father.
@@ -55,50 +55,50 @@ export default Vue.extend({
       films: [
         {
           id: 1,
-          image: require(`~/assets/ss-gerajak.jpeg`),
-          title: "Gerajak (2021)",
-          type: "Short Surrealist Dance Film",
-          role: "Roles: Script Continuity, Still Photographer",
-          accolades: ["MIP Awards Moving Image of the Year 2021"],
-          href: "https://www.instagram.com/agterplaasproduction/",
+          image: require('~/assets/ss-gerajak.jpeg'),
+          title: 'Gerajak (2021)',
+          type: 'Short Surrealist Dance Film',
+          role: 'Roles: Script Continuity, Still Photographer',
+          accolades: ['MIP Awards Moving Image of the Year 2021'],
+          href: 'https://www.instagram.com/agterplaasproduction/'
         },
         {
           id: 2,
-          image: require(`~/assets/ss-belrusak.webp`),
-          title: "Belrusak (2020)",
-          type: "Short Documentary Film",
-          role: "Role: Director",
+          image: require('~/assets/ss-belrusak.webp'),
+          title: 'Belrusak (2020)',
+          type: 'Short Documentary Film',
+          role: 'Role: Director',
           accolades: [
-            "Best Documentary October Edition Feel The Reel International Film Festival 2020",
-            "Official Selection Feel The Reel International Film Festival 2020",
-            "Official Selection Lift-Off Global Network First-Time Filmmaker Sessions 2020",
-            "Official Selection Lift-Off Global Network Lift-Off Sessions 2020",
-            "Official Selection Viddsee Juree Awards Indonesia 2020",
+            'Best Documentary October Edition Feel The Reel International Film Festival 2020',
+            'Official Selection Feel The Reel International Film Festival 2020',
+            'Official Selection Lift-Off Global Network First-Time Filmmaker Sessions 2020',
+            'Official Selection Lift-Off Global Network Lift-Off Sessions 2020',
+            'Official Selection Viddsee Juree Awards Indonesia 2020'
           ],
-          href: "https://www.viddsee.com/video/belrusak/ywxkh",
+          href: 'https://www.viddsee.com/video/belrusak/ywxkh'
         },
         {
           id: 3,
-          image: require(`~/assets/ss-menyusulmu.webp`),
-          title: "Menyusulmu Bisa Menunggu (2015)",
-          type: "Short Fiction Film",
-          role: "Roles: Actor, Producer",
-          accolades: ["Winner SMA Global Jaya Film Festival 2015"],
-          href: "https://youtu.be/BMIpvCrxou4",
+          image: require('~/assets/ss-menyusulmu.webp'),
+          title: 'Menyusulmu Bisa Menunggu (2015)',
+          type: 'Short Fiction Film',
+          role: 'Roles: Actor, Producer',
+          accolades: ['Winner SMA Global Jaya Film Festival 2015'],
+          href: 'https://youtu.be/BMIpvCrxou4'
         },
         {
           id: 4,
-          image: require(`~/assets/ss-terbelenggu.webp`),
-          title: "Terbelenggu (2014)",
-          type: "Short Fiction Film",
-          role: "Roles: Actor, Music Director",
-          accolades: ["Winner 8Schoolastic SMAN 8 Jakarta Film Festival 2014"],
-          href: "https://youtu.be/_Q2Xg5CHHf8",
-        },
-      ],
-    };
-  },
-});
+          image: require('~/assets/ss-terbelenggu.webp'),
+          title: 'Terbelenggu (2014)',
+          type: 'Short Fiction Film',
+          role: 'Roles: Actor, Music Director',
+          accolades: ['Winner 8Schoolastic SMAN 8 Jakarta Film Festival 2014'],
+          href: 'https://youtu.be/_Q2Xg5CHHf8'
+        }
+      ]
+    }
+  }
+})
 </script>
 
 <style scoped>

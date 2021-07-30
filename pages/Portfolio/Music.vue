@@ -4,16 +4,16 @@
     <div class="relative lg:w-2/3 mx-auto">
       <div class="mixtape-grid-container w-full">
         <div
-          class="mixtape-grid row-span-1 col-span-5 grayscale bg-gray-ivory"
           v-for="mixtape in mixtapes"
           :key="mixtape.id"
-          v-bind:class="gridSpan(mixtape.rowGrid, mixtape.colGrid)"
+          class="mixtape-grid row-span-1 col-span-5 grayscale bg-gray-ivory"
+          :class="gridSpan(mixtape.rowGrid, mixtape.colGrid)"
         >
           <transition name="mixtape-fade">
             <div
               v-show="!mixtape.show"
               class="mixtape-text font-cormorant"
-              v-on:click="mixtape.show = true"
+              @click="mixtape.show = true"
             >
               {{ mixtape.name }}
             </div>
@@ -28,16 +28,15 @@
               scrolling="no"
               frameborder="0"
               allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            >
-            </iframe>
+            />
           </transition>
           <div
-            class="my-2 text-center text-sm"
             v-show="mixtape.show && mixtape.id === 4"
+            class="my-2 text-center text-sm"
           >
             <div
               class="inline-block mx-4 cursor-pointer"
-              v-on:click="
+              @click="
                 mixtape.active = loopNext(
                   mixtape.active - 1,
                   mixtape.src.length
@@ -47,17 +46,17 @@
               Prev
             </div>
             <div
-              class="mixtape-index"
               v-for="(link, index) in mixtape.src"
               :key="`mixtape.name-${index}`"
-              v-bind:class="{ 'mixtape-active': index == mixtape.active - 1 }"
-              v-on:click="mixtape.active = index + 1"
+              class="mixtape-index"
+              :class="{ 'mixtape-active': index == mixtape.active - 1 }"
+              @click="mixtape.active = index + 1"
             >
               {{ index + 1 }}
             </div>
             <div
               class="inline-block mx-4 cursor-pointer"
-              v-on:click="
+              @click="
                 mixtape.active = loopNext(
                   mixtape.active + 1,
                   mixtape.src.length
@@ -74,21 +73,21 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import Vue from 'vue'
+import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import PortfolioHeading from '../../components/PortfolioHeading.vue'
 
-gsap.registerPlugin(ScrollTrigger);
-import PortfolioHeading from "../../components/PortfolioHeading.vue";
+gsap.registerPlugin(ScrollTrigger)
 
 export default Vue.extend({
-  name: "Music",
+  name: 'Music',
   components: {
     PortfolioHeading
   },
-  data: function() {
+  data () {
     return {
-      title: "mixtapes",
+      title: 'mixtapes',
       description: `
         Being a  
         <span class="">part-time DJ</span> 
@@ -106,9 +105,9 @@ export default Vue.extend({
           show: false,
           rowGrid: 3,
           colGrid: 2,
-          name: "Suddenly Kaget Mixtape: masa, masa",
+          name: 'Suddenly Kaget Mixtape: masa, masa',
           src: [
-            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/769393264&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/769393264&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
           ],
           active: 1
         },
@@ -117,8 +116,8 @@ export default Vue.extend({
           show: false,
           rowGrid: 3,
           colGrid: 3,
-          name: "SUBLIMINAL MESSAGES: SWABTEST#1",
-          src: ["https://www.youtube.com/embed/pvJEInkcfxI"],
+          name: 'SUBLIMINAL MESSAGES: SWABTEST#1',
+          src: ['https://www.youtube.com/embed/pvJEInkcfxI'],
           active: 1
         },
         {
@@ -126,9 +125,9 @@ export default Vue.extend({
           show: false,
           rowGrid: 1,
           colGrid: 5,
-          name: "Suddenly Kaget Mixtape: Maharddhika",
+          name: 'Suddenly Kaget Mixtape: Maharddhika',
           src: [
-            "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2FSuddenlyKaget%2Fsuddenlykaget-mixtape-maharddhika%2F"
+            'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2FSuddenlyKaget%2Fsuddenlykaget-mixtape-maharddhika%2F'
           ],
           active: 1
         },
@@ -137,53 +136,53 @@ export default Vue.extend({
           show: false,
           rowGrid: 1,
           colGrid: 5,
-          name: "buvv Mixtapes",
+          name: 'buvv Mixtapes',
           src: [
-            "https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbuvv%2Finfidelity-in-suburbia-mixtape-awal-tahun-2019%2F",
-            "https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbuvv%2Ftjakrawala-mixtape-awal-tahun%2F",
-            "https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbuvv%2Fekspresi-mixtape-akhir-tahun-2018%2F",
-            "https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbuvv%2Fdisko-medley-indonesia-mixtape-akhir-tahun-2018%2F"
+            'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbuvv%2Finfidelity-in-suburbia-mixtape-awal-tahun-2019%2F',
+            'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbuvv%2Ftjakrawala-mixtape-awal-tahun%2F',
+            'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbuvv%2Fekspresi-mixtape-akhir-tahun-2018%2F',
+            'https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbuvv%2Fdisko-medley-indonesia-mixtape-akhir-tahun-2018%2F'
           ],
           active: 1
         }
       ]
-    };
+    }
   },
-  mounted: function() {
+  mounted () {
     gsap.fromTo(
-      ".mixtape-grid",
+      '.mixtape-grid',
       { y: 100, autoAlpha: 0 },
       {
         scrollTrigger: {
-          trigger: ".mixtape-grid-container",
-          start: "top 64%",
-          end: "20% 30%",
-          toggleActions: "play none none none"
+          trigger: '.mixtape-grid-container',
+          start: 'top 64%',
+          end: '20% 30%',
+          toggleActions: 'play none none none'
         },
         y: 0,
         autoAlpha: 1,
         duration: 1,
         stagger: 0.2
       }
-    );
+    )
   },
   methods: {
-    gridSpan: function(rowSize: number, columnSize: number) {
-      const row: string = "md:row-span-" + rowSize;
-      const col: string = "md:col-span-" + columnSize;
-      return row + " " + col;
+    gridSpan (rowSize: number, columnSize: number) {
+      const row: string = 'md:row-span-' + rowSize
+      const col: string = 'md:col-span-' + columnSize
+      return row + ' ' + col
     },
-    loopNext: function(id: number, length: number) {
-      const len = length;
+    loopNext (id: number, length: number) {
+      const len = length
       if (id > len) {
-        id = 1;
+        id = 1
       } else if (id < 1) {
-        id = len;
+        id = len
       }
-      return id;
+      return id
     }
   }
-});
+})
 
 </script>
 

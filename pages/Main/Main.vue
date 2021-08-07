@@ -4,19 +4,19 @@
     <div class="pt-16">
       <slot />
     </div>
-    <TheFooter />
+    <!-- <TheFooter /> -->
   </div>
 </template>
 <script lang="ts">
-import Vue from 'vue'
-import TheNav from '../../components/TheNav.vue'
-import TheFooter from '../../components/TheFooter.vue'
+import Vue from "vue";
+import TheNav from "../../components/TheNav.vue";
+// import TheFooter from '../../components/TheFooter.vue'
 
 export default Vue.extend({
-  name: 'Main',
+  name: "Main",
   components: {
     TheNav,
-    TheFooter
-  }
-})
+    // TheFooter
+  },
+});
 </script>

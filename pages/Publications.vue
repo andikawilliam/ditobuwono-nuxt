@@ -123,6 +123,11 @@ export default Vue.extend({
             "Kami Mengumpulkan Tanggapan Masyarakat tentang Keputusan Perpanjangan PPKM",
           link: "https://www.whiteboardjournal.com/ideas/human-interest/kami-mengumpulkan-tanggapan-masyarakat-tentang-keputusan-perpanjangan-ppkm/",
         },
+
+        {
+          title: "Who, What, Why: Rebricks",
+          link: "https://www.whiteboardjournal.com/ideas/design/who-what-why-rebricks/",
+        },
       ],
       issuu: [
         {

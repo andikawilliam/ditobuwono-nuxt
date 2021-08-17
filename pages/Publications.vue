@@ -128,6 +128,11 @@ export default Vue.extend({
           title: "Who, What, Why: Rebricks",
           link: "https://www.whiteboardjournal.com/ideas/design/who-what-why-rebricks/",
         },
+        {
+          title:
+            "Suara Orang Papua Tentang Permasalahan Rasisme yang Sering Terjadi di Indonesia",
+          link: "https://www.whiteboardjournal.com/ideas/human-interest/suara-orang-papua-tentang-permasalahan-rasisme-yang-sering-terjadi-di-indonesia/",
+        },
       ],
       issuu: [
         {

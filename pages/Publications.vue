@@ -3,7 +3,7 @@
     <div class="relative px-8 md:px-20 lg:px-20 pb-40">
       <div class="text-center mx-auto">
         <div class="text-lg font-bold no-underline text-gray-dito">
-          Whiteboardjournal
+          Whiteboard Journal
         </div>
         <div class="text-gray-600 underline lg:w-1/2 mx-auto">
           <div v-for="article in whiteboard" :key="article.title" class="py-4">
@@ -100,16 +100,6 @@ export default Vue.extend({
         },
         {
           title:
-            "Kabar dari Tenaga Medis di Saat Pandemi Kembali Memasuki Fase Kritis",
-          link: "https://www.whiteboardjournal.com/ideas/human-interest/kabar-dari-tenaga-medis-di-saat-pandemi-kembali-memasuki-fase-kritis/",
-        },
-        {
-          title:
-            "Database Ketersediaan Oksigen, Hingga Pendampingan Isolasi Mandiri, Kami Merangkum Inisiatif Warga untuk Membantu Kita Menghadapi Pandemi",
-          link: "https://www.whiteboardjournal.com/ideas/human-interest/database-ketersediaan-oksigen-hingga-pendampingan-isolasi-mandiri-kami-merangkum-inisiatif-warga-untuk-membantu-kita-menghadapi-pandemi/",
-        },
-        {
-          title:
             "Berbincang Dengan Psikolog tentang Mekanisme Coping Stres Di Saat Pandemi",
           link: "https://www.whiteboardjournal.com/ideas/human-interest/berbincang-dengan-psikolog-tentang-mekanisme-coping-stres-di-saat-pandemi/",
         },
@@ -132,6 +122,15 @@ export default Vue.extend({
           title:
             "Suara Orang Papua Tentang Permasalahan Rasisme yang Sering Terjadi di Indonesia",
           link: "https://www.whiteboardjournal.com/ideas/human-interest/suara-orang-papua-tentang-permasalahan-rasisme-yang-sering-terjadi-di-indonesia/",
+        },
+        {
+          title: "Mempertanyakan Relevansi Nasionalisme pada Generasi Terkini",
+          link: "https://www.whiteboardjournal.com/ideas/human-interest/mempertanyakan-relevansi-nasionalisme-pada-generasi-terkini/",
+        },
+        {
+          title:
+            "Mengingat Persatuan dan Menemukan Makna Barunya Bersama Iwan Fals, Hindia hingga Rendy Pandugo",
+          link: "https://www.whiteboardjournal.com/ideas/music/mengingat-persatuan-dan-menemukan-makna-barunya-bersama-iwan-fals-hindia-hingga-rendy-pandugo/",
         },
       ],
       issuu: [

@@ -67,7 +67,7 @@ export default Vue.extend({
           <span class="">the meaning of human beings.</span>
         `,
         `
-          Completed his psychology education at Gadjah Mada University, currently Dito are
+          Completed his psychology study at Gadjah Mada University, currently Dito are
           interested in working and developing more in the creative and research fields.</span>
         `
       ]

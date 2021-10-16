@@ -1,28 +1,23 @@
 <template>
   <Main>
     <div class="relative px-8 lg:px-12 pt-8 pb-32 sm:pb-20 lg:pb-40">
-      <div
-        class="
-          mx-auto
-          sm:grid sm:grid-cols-3
-          sm:gap-2
-          md:gap-12
-          lg:gap-16
-          xl:gap-20
-        "
-      >
+      <div class="mx-auto sm:flex sm:justify-center sm:flex-wrap">
         <div
           v-for="book in books"
           :key="book.id"
-          class="lg:row-span-1 lg:col-span-1 px-0 mb-32 sm:my-0"
+          class="
+            px-0
+            mb-32
+            sm:mb-10 sm:flex-none sm:w-1/2 sm:px-4
+            xl:w-1/3 xl:px-10
+          "
         >
-          <a :href="book.src">
-            <div class="cover-container relative mx-auto">
-              <img :src="book.cover" class="mx-auto publication-cover w-full" />
-            </div>
-          </a>
+          <div class="cover-container relative">
+            <img :src="book.cover" class="mx-auto w-full" />
+          </div>
         </div>
       </div>
+      <Book />
     </div>
   </Main>
 </template>
@@ -30,10 +25,12 @@
 <script lang="ts">
 import Vue from "vue";
 import Main from "./Main/Main.vue";
+import Book from "../components/Book.vue";
 
 export default Vue.extend({
   name: "Books",
   components: {
+    Book,
     Main,
   },
   data() {
@@ -44,18 +41,6 @@ export default Vue.extend({
           src: "https://linktr.ee/EndIsBeginning",
           cover: require("~/assets/cover-the-end-hd.png"),
           title: "Because the End Is Really the Beginning",
-        },
-        {
-          id: 2,
-          src: "https://issuu.com/matilampu/docs/mati_lampu_vol4_7f301e70bf19a9",
-          cover: require("~/assets/cover-toleransi-hd.png"),
-          title: "Mati Lampu Vol.4: Toleransi",
-        },
-        {
-          id: 3,
-          src: "https://issuu.com/haninditobuwono9413/docs/kaput_rev",
-          cover: require("~/assets/cover-kaput-hd.png"),
-          title: "Kaput",
         },
       ],
     };

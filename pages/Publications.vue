@@ -1,22 +1,26 @@
 <template>
   <Main>
     <div class="relative px-8 md:px-20 lg:px-20 pb-40">
-      <div class="text-center mx-auto">
-        <div class="text-lg font-bold no-underline text-gray-dito">
-          Whiteboard Journal
-        </div>
-        <div class="text-gray-600 underline lg:w-1/2 mx-auto">
-          <div v-for="article in whiteboard" :key="article.title" class="py-4">
+      <div class="text-left mx-auto">
+        <div class="text-gray-600 lg:w-1/2 mx-auto">
+          <div class="text-xl italic text-gray-dito">WHITEBOARD JOURNAL</div>
+          <div
+            v-for="article in whiteboard"
+            :key="article.title"
+            class="underline py-4"
+          >
             <a :href="article.link">
               {{ article.title }}
             </a>
           </div>
         </div>
-        <div class="text-lg font-bold no-underline text-gray-dito mt-12">
-          Issuu
-        </div>
-        <div class="text-gray-600 underline lg:w-1/2 mx-auto">
-          <div v-for="article in issuu" :key="article.title" class="py-4">
+        <div class="text-gray-600 lg:w-1/2 mx-auto">
+          <div class="text-xl italic text-gray-dito mt-12">Issuu</div>
+          <div
+            v-for="article in issuu"
+            :key="article.title"
+            class="underline py-4"
+          >
             <a :href="article.link">
               {{ article.title }}
             </a>

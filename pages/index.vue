@@ -6,19 +6,19 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Main from './Main/Main.vue'
-import Home from './Home/Home.vue'
-import About from './Home/About.vue'
+import Vue from "vue";
+import Main from "./Main/Main.vue";
+import Home from "./Home/Home.vue";
+import About from "./Home/About.vue";
 
 export default Vue.extend({
-  name: 'App',
+  name: "App",
   components: {
     Main,
     Home,
-    About
-  }
-})
+    About,
+  },
+});
 </script>
 
 <style>
@@ -30,11 +30,6 @@ export default Vue.extend({
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Playfair+Display:wght@400;500;600;700;800&display=swap");
 
 html {
-  background: rgb(255, 255, 255);
-}
-
-body {
-  background: rgb(0, 0, 0);
   background: radial-gradient(
     circle,
     rgb(231, 231, 231) 20%,

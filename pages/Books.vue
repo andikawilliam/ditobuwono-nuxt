@@ -25,12 +25,10 @@
 <script lang="ts">
 import Vue from "vue";
 import Main from "./Main/Main.vue";
-import Book from "../components/Book.vue";
 
 export default Vue.extend({
   name: "Books",
   components: {
-    Book,
     Main,
   },
   data() {

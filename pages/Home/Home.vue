@@ -4,17 +4,13 @@
     class="pb-28 pt-12 md:pt-16 md:pb-40 lg:pt-24 lg:pb-24 xl:pt-32"
   >
     <div class="flex px-6 md:px-24">
-      <div
-        class="portfolios-main text-current text-center lg:text-left mx-auto"
-      >
+      <div class="portfolios-main text-current text-left mx-auto">
         <div class="font-playfair-display">
           <p class="main-text">
             Hanindito Buwono is a
             <span class="text-typed text-black" />
           </p>
-          <p class="main-text">
-            He is based in Jakarta, Indonesia.
-          </p>
+          <p class="main-text">He is based in Jakarta, Indonesia.</p>
         </div>
         <!-- <font-awesome-icon
           class="text-lg sm:text-xl lg:text-32xl down-notice animate-bounce"
@@ -26,35 +22,35 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 
-import { gsap } from 'gsap'
-import ScrollToPlugin from 'gsap/ScrollToPlugin'
-import TextPlugin from 'gsap/TextPlugin'
+import { gsap } from "gsap";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+import TextPlugin from "gsap/TextPlugin";
 
-gsap.registerPlugin(ScrollToPlugin, TextPlugin)
+gsap.registerPlugin(ScrollToPlugin, TextPlugin);
 
-let offsetScroll = 220
+let offsetScroll = 220;
 const isMobile = window.matchMedia(
-  'only screen and (max-width: 760px)'
-).matches
+  "only screen and (max-width: 760px)"
+).matches;
 if (isMobile) {
-  offsetScroll = 150
+  offsetScroll = 150;
 }
 
 export default Vue.extend({
-  name: 'Home',
-  mounted () {
-    const tl = gsap.timeline()
+  name: "Home",
+  mounted() {
+    const tl = gsap.timeline();
     tl.fromTo(
-      '.main-text',
+      ".main-text",
       { autoAlpha: 0, y: 40 },
       { autoAlpha: 1, y: 0, duration: 1, stagger: 3, delay: 0.8 }
-    )
-    tl.to('.down-notice', { autoAlpha: 1, y: 10, duration: 1 })
-    tl.to('#notification', { autoAlpha: 1, height: 'auto', duration: 0.5 })
+    );
+    tl.to(".down-notice", { autoAlpha: 1, y: 10, duration: 1 });
+    tl.to("#notification", { autoAlpha: 1, height: "auto", duration: 0.5 });
 
-    const textArr = ['Filmmaker.', 'Writer.']
+    const textArr = ["Filmmaker.", "Writer."];
 
     const getAnimFromIndex = (index: number) => ({
       duration: 1.5,
@@ -63,57 +59,57 @@ export default Vue.extend({
       yoyo: true,
       text: {
         value: textArr[index],
-        delimiter: ''
+        delimiter: "",
       },
-      ease: 'ease.in'
-    })
+      ease: "ease.in",
+    });
 
     const getKeyFrames = () => {
-      const keyframes = []
+      const keyframes = [];
       for (let i = 0; i < textArr.length; i++) {
-        keyframes.push(getAnimFromIndex(i))
+        keyframes.push(getAnimFromIndex(i));
       }
-      return keyframes
-    }
+      return keyframes;
+    };
 
-    const tl1 = gsap.timeline()
+    const tl1 = gsap.timeline();
 
-    tl1.to('.text-typed', {
+    tl1.to(".text-typed", {
       delay: 1.5,
       keyframes: getKeyFrames(),
-      repeat: -1
-    })
+      repeat: -1,
+    });
 
     // cursor logic
     // blink only when not typing or deleting
 
-    const tl2 = gsap.timeline()
+    const tl2 = gsap.timeline();
 
-    tl2.to('.cursor', {
+    tl2.to(".cursor", {
       keyframes: [
-        { '--typeCursorOpacity': 1, duration: 1.5, delay: 0 },
-        { '--typeCursorOpacity': 0, duration: 0, delay: 0.55 },
-        { '--typeCursorOpacity': 1, duration: 0, delay: 0.55 },
-        { '--typeCursorOpacity': 0, duration: 0, delay: 0.55 },
-        { '--typeCursorOpacity': 1, duration: 0, delay: 0.55 },
-        { '--typeCursorOpacity': 1, duration: 1.5, delay: 0 }
+        { "--typeCursorOpacity": 1, duration: 1.5, delay: 0 },
+        { "--typeCursorOpacity": 0, duration: 0, delay: 0.55 },
+        { "--typeCursorOpacity": 1, duration: 0, delay: 0.55 },
+        { "--typeCursorOpacity": 0, duration: 0, delay: 0.55 },
+        { "--typeCursorOpacity": 1, duration: 0, delay: 0.55 },
+        { "--typeCursorOpacity": 1, duration: 1.5, delay: 0 },
       ],
-      repeat: -1
-    })
+      repeat: -1,
+    });
   },
   methods: {
-    goTo (destination: string) {
+    goTo(destination: string) {
       gsap.to(window, {
         duration: 2,
         scrollTo: {
           y: destination,
-          offsetY: offsetScroll
+          offsetY: offsetScroll,
         },
-        ease: 'power2'
-      })
-    }
-  }
-})
+        ease: "power2",
+      });
+    },
+  },
+});
 </script>
 
 <style scoped>

@@ -1,25 +1,39 @@
 <template>
-  <Main>
+  <Main class="bg-scroll bg-publications" headerColor="white">
     <div class="relative px-8 md:px-20 lg:px-20 pb-40">
-      <div class="text-left mx-auto">
-        <div class="text-gray-600 lg:w-1/2 mx-auto">
-          <div class="text-xl italic text-gray-dito">WHITEBOARD JOURNAL</div>
+      <div class="text-white text-left mx-auto">
+        <div class="lg:w-1/2 mx-auto mb-6">
+          <div class="text-xl italic font-bold">
+            ALSA Indonesia Specialized Research Team
+          </div>
           <div
-            v-for="article in whiteboard"
+            v-for="article in alsa"
             :key="article.title"
-            class="underline py-4"
+            class="underline py-3"
           >
             <a :href="article.link">
               {{ article.title }}
             </a>
           </div>
         </div>
-        <div class="text-gray-600 lg:w-1/2 mx-auto">
-          <div class="text-xl italic text-gray-dito mt-12">Issuu</div>
+        <div class="lg:w-1/2 mx-auto mb-6">
+          <div class="text-xl italic font-bold">Whiteboard Journal</div>
+          <div
+            v-for="article in whiteboard"
+            :key="article.title"
+            class="underline py-3"
+          >
+            <a :href="article.link">
+              {{ article.title }}
+            </a>
+          </div>
+        </div>
+        <div class="lg:w-1/2 mx-auto mb-6">
+          <div class="text-xl italic font-bold">Issuu</div>
           <div
             v-for="article in issuu"
             :key="article.title"
-            class="underline py-4"
+            class="underline py-3"
           >
             <a :href="article.link">
               {{ article.title }}
@@ -42,6 +56,13 @@ export default Vue.extend({
   },
   data() {
     return {
+      alsa: [
+        {
+          title:
+            "Reformasi Keadilan Melalui Optimalisasi Restorative Justice dan Proyeksi Implementasi",
+          link: "https://3f44e3af-b3b9-4d16-81b2-8d46625d8b63.filesusr.com/ugd/dbad2d_eee645835a334bd1b8f1fa364b514343.pdf",
+        },
+      ],
       whiteboard: [
         {
           title:
@@ -153,4 +174,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.bg-publications {
+  background-image: url("~/assets/bg-sands.jpg");
+}
 </style>

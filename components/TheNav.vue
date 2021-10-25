@@ -5,13 +5,13 @@
       class="
         flex
         justify-between
-        text-gray-dito
         font-cormorant font-medium
         px-6
         md:px-12
         pt-4
         md:pt-8
       "
+      :class="[headerColor === 'white' ? 'text-white' : 'text-gray-dito']"
     >
       <NuxtLink to="/" class="flex md:text-2xl cursor-pointer opacity-90">
         <div class="font-black">DITO</div>
@@ -22,22 +22,36 @@
         v-on:click="activeSidebar = !activeSidebar"
       >
         <span
-          class="burger-line bg-black opacity-75"
+          class="burger-line opacity-75"
+          :class="[
+            headerColor === 'white' ? 'bg-white' : 'bg-black',
+            activeSidebar && 'top-bun-active',
+          ]"
           id="top-bun"
-          v-bind:class="{ 'top-bun-active': activeSidebar }"
         />
         <span
-          class="burger-line bg-black opacity-75"
+          class="burger-line opacity-75"
+          :class="[
+            headerColor === 'white' ? 'bg-white' : 'bg-black',
+            activeSidebar && 'bot-bun-active',
+          ]"
           id="bot-bun"
-          v-bind:class="{ 'bot-bun-active': activeSidebar }"
         />
       </div>
       <div
         class="sidebar desktopbar sm:w-auto sm:h-auto transition-width"
-        v-bind:class="[activeSidebar ? 'w-full' : 'w-0']"
+        :class="[
+          activeSidebar ? 'w-full' : 'w-0',
+          headerColor === 'white' ? 'bg-gray-dito' : 'bg-gray-ivory',
+        ]"
       >
         <div class="text-3xl sm:text-lg sm:flex">
-          <NuxtLink v-for="menu in menus" :key="menu.text" :to="menu.to" class="navline ml-8 my-4 sm:my-0">
+          <NuxtLink
+            v-for="menu in menus"
+            :key="menu.text"
+            :to="menu.to"
+            class="navline ml-8 my-4 sm:my-0"
+          >
             {{ menu.text }}
           </NuxtLink>
         </div>
@@ -55,9 +69,10 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
+// :class="{ 'bot-bun-active': activeSidebar }"
 export default Vue.extend({
   name: "TheNav",
-  props: ["isMain"],
+  props: ["isMain", "headerColor"],
   components: {
     TheNotification,
   },
@@ -66,22 +81,22 @@ export default Vue.extend({
       activeSidebar: false,
       menus: [
         {
-          to: '/filmography',
-          text: 'Films',
+          to: "/filmography",
+          text: "Films",
         },
         {
-          to: '/books',
-          text: 'Books',
+          to: "/books",
+          text: "Books",
         },
         {
-          to: '/publications',
-          text: 'Publications',
+          to: "/publications",
+          text: "Publications",
         },
         {
-          to: '/otherworks',
-          text: 'Other Works',
+          to: "/otherworks",
+          text: "Other Works",
         },
-      ]
+      ],
     };
   },
   methods: {
@@ -102,7 +117,7 @@ export default Vue.extend({
 
 <style scoped>
 .sidebar {
-  @apply absolute h-screen bg-gray-ivory bg-opacity-95 overflow-hidden right-0 top-0 flex items-center;
+  @apply absolute h-screen bg-opacity-95 overflow-hidden right-0 top-0 flex items-center;
 }
 
 @screen sm {

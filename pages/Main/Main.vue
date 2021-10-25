@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheNav />
+    <TheNav :headerColor="headerColor" />
     <div class="pt-16">
       <slot />
     </div>
@@ -14,6 +14,7 @@ import TheNav from "../../components/TheNav.vue";
 
 export default Vue.extend({
   name: "Main",
+  props: ["headerColor"],
   components: {
     TheNav,
     // TheFooter

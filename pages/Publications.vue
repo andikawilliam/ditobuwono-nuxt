@@ -1,6 +1,6 @@
 <template>
   <Main class="bg-scroll bg-publications" headerColor="white">
-    <div class="relative px-8 md:px-20 lg:px-20 pb-40">
+    <div class="relative px-8 md:px-20 lg:px-20 pb-40 xl:right-12">
       <div class="text-white text-left mx-auto">
         <div class="lg:w-1/2 mx-auto mb-6">
           <div class="text-xl italic font-bold">

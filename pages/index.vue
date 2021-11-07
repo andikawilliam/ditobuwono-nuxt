@@ -29,11 +29,8 @@ export default Vue.extend({
 */
 
 html {
-  background: radial-gradient(
-    circle,
-    rgb(231, 231, 231) 20%,
-    rgb(233, 233, 233) 100%
-  );
+  /* background: radial-gradient(rgb(231, 231, 231) 20%, rgb(233, 233, 233) 100%); */
+  background: radial-gradient(rgb(247, 247, 247) 20%, rgb(255, 255, 255) 100%);
 }
 
 #app {

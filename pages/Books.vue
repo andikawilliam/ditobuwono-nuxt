@@ -13,7 +13,9 @@
           "
         >
           <div class="cover-container relative">
-            <img :src="book.cover" class="mx-auto w-full" />
+            <a :href="book.src">
+              <img :src="book.cover" class="mx-auto w-full" />
+            </a>
           </div>
         </div>
       </div>

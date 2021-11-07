@@ -108,6 +108,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { gsap } from "gsap";
 
 export default Vue.extend({
   name: "TheNotification",
@@ -124,7 +125,8 @@ export default Vue.extend({
   },
   methods: {
     closeNotification() {
-      this.notifState = false;
+      const tl = gsap.timeline();
+      tl.to("#notification", { autoAlpha: 0, y: 60, duration: 0.5 });
     },
   },
 });

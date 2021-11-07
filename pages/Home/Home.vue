@@ -48,7 +48,11 @@ export default Vue.extend({
       { autoAlpha: 1, y: 0, duration: 1, stagger: 3, delay: 0.8 }
     );
     tl.to(".down-notice", { autoAlpha: 1, y: 10, duration: 1 });
-    tl.to("#notification", { autoAlpha: 1, height: "auto", duration: 0.5 });
+    tl.fromTo(
+      "#notification",
+      { autoAlpha: 0, y: 20 },
+      { autoAlpha: 1, y: -20, duration: 0.5 }
+    );
 
     const textArr = ["Filmmaker.", "Writer."];
 

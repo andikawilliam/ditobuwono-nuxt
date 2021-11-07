@@ -1,6 +1,5 @@
 <template>
   <header id="header" class="sticky w-full top-0 z-20 header-portfolio">
-    <TheNotification />
     <div
       class="
         flex
@@ -62,7 +61,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import TheNotification from "./TheNotification.vue";
+import TheAlert from "./TheAlert.vue";
 
 import { gsap } from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
@@ -74,7 +73,7 @@ export default Vue.extend({
   name: "TheNav",
   props: ["isMain", "headerColor"],
   components: {
-    TheNotification,
+    TheAlert,
   },
   data() {
     return {

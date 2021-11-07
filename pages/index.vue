@@ -27,7 +27,6 @@ export default Vue.extend({
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Playfair+Display:wght@400;500;600;700;800&display=swap");
 
 html {
   background: radial-gradient(
@@ -38,7 +37,7 @@ html {
 }
 
 #app {
-  font-family: "Open Sans", serif;
+  font-family: serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #262626;

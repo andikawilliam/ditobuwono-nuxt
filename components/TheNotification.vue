@@ -2,16 +2,16 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div
     id="notification"
-    class="font-open-sans"
+    class="fixed w-5/6 lg:w-3/4 mx-auto left-0 right-0 bottom-2"
     v-show="notifState && notifText"
   >
-    <div class="max-w-8xl mx-auto py-3 px-3 sm:px-6 lg:px-10">
+    <div class="py-3 px-3 sm:px-6 lg:px-10 bg-gray-dito rounded-xl">
       <div class="flex items-center justify-between flex-wrap">
-        <div class="w-0 flex-1 flex items-center">
-          <span class="flex p-2 rounded-lg">
+        <div class="w-0 flex-1 flex items-center text-white text-xs md:text-sm">
+          <span class="hidden md:flex p-2 rounded-lg">
             <!-- Heroicon name: outline/speakerphone -->
             <svg
-              class="h-6 w-6 text-gray-500"
+              class="h-6 w-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -26,7 +26,7 @@
               />
             </svg>
           </span>
-          <p class="ml-3 font-medium text-gray-500">
+          <p class="ml-3 font-medium">
             <span class="md:hidden">
               <a :href="notifLink">
                 {{ this.notifText }}
@@ -44,9 +44,7 @@
             flex-shrink-0
             w-full
             hidden
-            sm:order-2
-            sm:mt-0
-            sm:w-auto
+            sm:order-2 sm:mt-0 sm:w-auto
             md:inline
           "
         >
@@ -79,8 +77,7 @@
               p-2
               rounded-md
               hover:opacity-50
-              focus:outline-none
-              focus:ring-2 focus:ring-white
+              focus:outline-none focus:ring-2 focus:ring-white
               sm:-mr-2
             "
             v-on:click="closeNotification"
@@ -135,7 +132,7 @@ export default Vue.extend({
 
 <style scoped>
 #notification {
-  height: 0;
+  opacity: 0;
   overflow: hidden;
   font-size: 0.9em;
 }

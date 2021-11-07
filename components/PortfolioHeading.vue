@@ -24,36 +24,15 @@ export default Vue.extend({
   props: ["title", "description"],
   components: {
     PortfolioTitle,
-    PortfolioDescription
+    PortfolioDescription,
   },
   data() {
     return {
       titleId: this.title,
       lineId: "line-" + this.title,
-      descriptionId: "desc-" + this.title
+      descriptionId: "desc-" + this.title,
     };
-  }
-  // mounted: function() {
-  //   this.headerAnimation();
-  // },
-  // methods: {
-  //   headerAnimation() {
-  //     const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: "#" + this.titleId,
-  //         start: "bottom 80%",
-  //         end: "bottom 80%",
-  //         // markers: true,
-  //         toggleActions: "play none none reverse"
-  //       }
-  //     });
-  //     tl.fromTo(
-  //       "#" + this.descriptionId,
-  //       { autoAlpha: 0, y: "-2vw" },
-  //       { autoAlpha: 1, y: 0, ease: "power2" }
-  //     );
-  //   }
-  // }
+  },
 });
 </script>
 

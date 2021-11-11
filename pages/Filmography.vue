@@ -62,7 +62,7 @@ export default Vue.extend({
           accolades: [
           'MIP Awards Moving Image of the Year 2021',
           'Official Selection Himafisi Film Festival 2021',
-          'Top 20 Fiction Short Film Category Balimakarya Short Film & Documentary Festival 2021'
+          'Top 20 Short Fiction Film Category Balimakarya Short Film & Documentary Festival 2021'
           ],
           href: 'https://www.instagram.com/agterplaasproduction/'
         },

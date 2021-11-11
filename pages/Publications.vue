@@ -59,7 +59,7 @@ export default Vue.extend({
       alsa: [
         {
           title:
-            "Reformasi Keadilan Melalui Optimalisasi Restorative Justice dan Proyeksi Implementasi",
+            "Reformasi Keadilan Melalui Optimalisasi Restorative Justice dan Proyeksi Implementasi Neurolaw dalam Sistem Hukum Indonesia",
           link: "https://3f44e3af-b3b9-4d16-81b2-8d46625d8b63.filesusr.com/ugd/dbad2d_eee645835a334bd1b8f1fa364b514343.pdf",
         },
       ],
@@ -160,7 +160,7 @@ export default Vue.extend({
       ],
       issuu: [
         {
-          title: "Mati Lampu vol4",
+          title: "Mati Lampu Vol.4",
           link: "https://issuu.com/matilampu/docs/mati_lampu_vol4_7f301e70bf19a9",
         },
         {

@@ -47,7 +47,7 @@ export default Vue.extend({
         <span class="italic"> Terbelenggu </span> (2014)
         and 
         <span class="italic"> Menyusulmu Bisa Menunggu </span> (2015)
-        are short films that he has starred in. After a long time, on the 1st of September 2020, 
+        are the short films that he has starred in. After a long time, on the 1st of September 2020, 
         <span class="italic">Belrusak</span> has been premiered as
         Dito's directorial debut in the form of a short documentary.
       `,
@@ -59,7 +59,11 @@ export default Vue.extend({
           title: 'Gerajak (2021)',
           type: 'Short Surrealist Dance Film',
           role: 'Roles: Script Continuity, Still Photographer',
-          accolades: ['MIP Awards Moving Image of the Year 2021'],
+          accolades: [
+          'MIP Awards Moving Image of the Year 2021',
+          'Official Selection Himafisi Film Festival 2021',
+          'Top 20 Short Fiction Film Category Balimakarya Short Film & Documentary Festival 2021'
+          ],
           href: 'https://www.instagram.com/agterplaasproduction/'
         },
         {
@@ -70,6 +74,7 @@ export default Vue.extend({
           role: 'Role: Director',
           accolades: [
             'Best Documentary October Edition Feel The Reel International Film Festival 2020',
+            'Top 25 Short Documentaries Recommended by Associations from Festival Film Indonesia 2021',
             'Official Selection Feel The Reel International Film Festival 2020',
             'Official Selection Lift-Off Global Network First-Time Filmmaker Sessions 2020',
             'Official Selection Lift-Off Global Network Lift-Off Sessions 2020',

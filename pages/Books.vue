@@ -2,9 +2,12 @@
   <Main>
     <div class="relative px-8 lg:px-12 pt-8 pb-32 sm:pb-20 lg:pb-40">
       <transition name="fade">
-        <BookDetail v-if="selectedBook" :selected-book="selectedBook" />
+        <BookDetail key="1" v-if="selectedBook" :selected-book="selectedBook" />
+      </transition>
+      <transition name="fade">
         <BookList
-          v-else
+          key="2"
+          v-show="!selectedBook"
           :books="books"
           v-on:set-selected-book="setSelectedBook"
         />

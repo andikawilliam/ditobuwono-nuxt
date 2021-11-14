@@ -28,6 +28,7 @@ declare interface Book {
   cover: string;
   title: string;
   detail: string;
+  reviews: { review: string; by: string }[];
   accolades: string[];
 }
 
@@ -60,6 +61,14 @@ export default Vue.extend({
           our body and soul. With the illustration and audio
           in this book, Dito hopes that his readers can feel
           the feelings that he has felt during his life until now.`,
+          reviews: [
+            {
+              review: `Experience baru banget sih ini!! Ada visual, ada teks, ada audio. Gue baca dua kali, pertama 
+              pake audio, kedua ga pake audio, Dan bener audio emphasize the feelings sih. Gue suka banget visual 
+              di chapter 2! Berasa marahnya.`,
+              by: "Firnita Taufick, penulis buku 'Strings Attached'",
+            },
+          ],
           accolades: [
             "Editors' Choice at bukuindie.com",
             "Book Talks at “Bedah Buku Madania“",

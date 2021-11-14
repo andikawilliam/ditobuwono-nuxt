@@ -1,9 +1,10 @@
 <template>
   <div class="relative">
-    <div class="mx-auto text-center mb-16">
-      <h2 class="text-4xl sm:text-5xl font-light pb-4">
-        {{ selectedBook.title }}
-      </h2>
+    <div class="mx-auto text-left mb-24 w-3/4">
+      <p class="text-xl sm:text-3xl font-extralight pb-4">
+        "{{ selectedBook.reviews[0].review }}"
+        <span class="italic">- {{ selectedBook.reviews[0].by }}</span>
+      </p>
     </div>
 
     <div class="grid sm:grid-cols-2 gap-12">
@@ -12,7 +13,8 @@
           <img class="shadow" :src="selectedBook.cover" />
         </a>
       </div>
-      <div class="text-lg sm:text-xl font-light sm:pt-24 sm:px-12">
+      <div class="text-lg sm:text-xl font-light sm:pt-16 sm:px-12">
+        <h1 class="text-xl sm:text-4xl mb-6">{{ selectedBook.title }}</h1>
         <p>{{ selectedBook.detail }}</p>
         <a :href="selectedBook.link">
           <button class="mt-4 underline text-purple-600 hover:opacity-80">

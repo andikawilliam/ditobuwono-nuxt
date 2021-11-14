@@ -1,25 +1,14 @@
 <template>
   <Main>
     <div class="relative px-8 lg:px-12 pt-8 pb-32 sm:pb-20 lg:pb-40">
-      <div class="mx-auto sm:flex sm:justify-center sm:flex-wrap">
-        <div
-          v-for="book in books"
-          :key="book.id"
-          class="
-            px-0
-            mb-32
-            sm:mb-10 sm:flex-none sm:w-1/2 sm:px-4
-            xl:w-1/3 xl:px-10
-          "
-        >
-          <div class="cover-container relative">
-            <a :href="book.src">
-              <img :src="book.cover" class="mx-auto w-full" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <Book />
+      <transition name="fade">
+        <BookDetail v-if="selectedBook" :selected-book="selectedBook" />
+        <BookList
+          v-else
+          :books="books"
+          v-on:set-selected-book="setSelectedBook"
+        />
+      </transition>
     </div>
   </Main>
 </template>
@@ -27,32 +16,69 @@
 <script lang="ts">
 import Vue from "vue";
 import Main from "./Main/Main.vue";
+import BookDetail from "../components/BookDetail.vue";
+import BookList from "../components/BookList.vue";
+
+declare interface Book {
+  id: number;
+  link: string;
+  cover: string;
+  title: string;
+  detail: string;
+  accolades: string[];
+}
+
+declare interface BaseComponentData {
+  selectedBook: undefined | Book;
+  books: Book[];
+}
 
 export default Vue.extend({
   name: "Books",
   components: {
     Main,
+    BookDetail,
+    BookList,
   },
-  data() {
+  data(): BaseComponentData {
     return {
+      selectedBook: undefined,
       books: [
         {
           id: 1,
-          src: "https://linktr.ee/EndIsBeginning",
+          link: "https://linktr.ee/EndIsBeginning",
           cover: require("~/assets/cover-the-end-hd.png"),
           title: "Because the End Is Really the Beginning",
+          detail: `Dito wrote a short story book about regrets
+          Where according to him, a mistake will remain forever
+          and it is part of our life.
+          It cannot be forced to
+          be erased, we must embraced it in
+          our body and soul. With the illustration and audio
+          in this book, Dito hopes that his readers can feel
+          the feelings that he has felt during his life until now.`,
+          accolades: [
+            "Editors' Choice at bukuindie.com",
+            "Book Talks at “Bedah Buku Madania“",
+          ],
         },
       ],
     };
+  },
+  methods: {
+    setSelectedBook: function (bookId: number) {
+      this.selectedBook = this.books[bookId - 1];
+    },
   },
 });
 </script>
 
 <style scoped>
-.cover-container {
-  transition: transform 0.5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
-.cover-container:hover {
-  transform: translateY(-1vw);
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

@@ -1,10 +1,18 @@
 <template>
-  <div class="relative">
-    <div class="mx-auto text-left mb-24 w-3/4">
-      <p class="text-xl sm:text-3xl font-extralight pb-4">
-        "{{ selectedBook.reviews[0].review }}"
-        <span class="italic">- {{ selectedBook.reviews[0].by }}</span>
-      </p>
+  <div>
+    <div
+      class="
+        text-xl
+        font-extralight
+        mx-auto
+        text-left
+        mb-16
+        sm:text-2xl sm:mb-24 sm:w-3/4
+        xl:text-3xl
+      "
+    >
+      <p class="pb-4">"{{ selectedBook.reviews[0].review }}"</p>
+      <p class="italic">- {{ selectedBook.reviews[0].by }}</p>
     </div>
 
     <div class="grid sm:grid-cols-2 gap-12">
@@ -13,8 +21,8 @@
           <img class="shadow" :src="selectedBook.cover" />
         </a>
       </div>
-      <div class="text-lg sm:text-xl font-light sm:pt-16 sm:px-12">
-        <h1 class="text-xl sm:text-4xl mb-6">{{ selectedBook.title }}</h1>
+      <div class="text-lg sm:text-xl font-light xl:pt-16 lg:px-12">
+        <h1 class="text-3xl sm:text-4xl mb-6">{{ selectedBook.title }}</h1>
         <p>{{ selectedBook.detail }}</p>
         <a :href="selectedBook.link">
           <button class="mt-4 underline text-purple-600 hover:opacity-80">

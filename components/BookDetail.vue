@@ -3,15 +3,21 @@
     <div
       class="
         text-xl
-        font-extralight
+        font-light
         mx-auto
         text-left
         mb-16
-        sm:text-2xl sm:mb-24 sm:w-3/4
+        sm:font-extralight sm:text-2xl sm:mb-24 sm:w-3/4
         xl:text-3xl
       "
     >
-      <p class="pb-4">"{{ selectedBook.reviews[0].review }}"</p>
+      <p
+        :key="review"
+        v-for="review in selectedBook.reviews[0].review"
+        class="pb-4"
+      >
+        "<span v-html="review"></span>"
+      </p>
       <p class="italic">- {{ selectedBook.reviews[0].by }}</p>
     </div>
 

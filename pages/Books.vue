@@ -28,7 +28,7 @@ declare interface Book {
   cover: string;
   title: string;
   detail: string;
-  reviews: { review: string; by: string }[];
+  reviews: { review: string[]; by: string }[];
   accolades: string[];
 }
 
@@ -63,10 +63,12 @@ export default Vue.extend({
           the feelings that he has felt during his life until now.`,
           reviews: [
             {
-              review: `Experience baru banget sih ini!! Ada visual, ada teks, ada audio. Gue baca dua kali, pertama 
-              pake audio, kedua ga pake audio, Dan bener audio emphasize the feelings sih.'
-              'Gue suka banget visual 
+              review: [
+                `Experience baru banget sih ini!! Ada visual, ada teks, ada audio. Gue baca dua kali, pertama 
+              pake audio, kedua ga pake audio, Dan bener audio emphasize the feelings sih.`,
+                `Gue suka banget visual 
               di chapter 2! Berasa marahnya.`,
+              ],
               by: "Firnita, Author of 'Strings Attached' & 'Shorter Stories' ",
             },
           ],

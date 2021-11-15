@@ -53,8 +53,8 @@ export default Vue.extend({
           link: "https://linktr.ee/EndIsBeginning",
           cover: require("~/assets/cover-the-end-hd.png"),
           title: "Because the End Is Really the Beginning",
-          detail: `Dito wrote a short story book about regrets
-          Where according to him, a mistake will remain forever
+          detail: `Dito wrote a short story book about regrets. 
+          For him, a mistake will remain forever
           and it is part of our life.
           It cannot be forced to
           be erased, we must embraced it in
@@ -64,9 +64,10 @@ export default Vue.extend({
           reviews: [
             {
               review: `Experience baru banget sih ini!! Ada visual, ada teks, ada audio. Gue baca dua kali, pertama 
-              pake audio, kedua ga pake audio, Dan bener audio emphasize the feelings sih. Gue suka banget visual 
+              pake audio, kedua ga pake audio, Dan bener audio emphasize the feelings sih.'
+              'Gue suka banget visual 
               di chapter 2! Berasa marahnya.`,
-              by: "Firnita Taufick, penulis buku 'Strings Attached'",
+              by: "Firnita, Author of 'Strings Attached' & 'Shorter Stories' ",
             },
           ],
           accolades: [

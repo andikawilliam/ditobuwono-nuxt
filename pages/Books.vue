@@ -64,7 +64,7 @@ export default Vue.extend({
           reviews: [
             {
               review: `Experience baru banget sih ini!! Ada visual, ada teks, ada audio. Gue baca dua kali, pertama 
-              pake audio, kedua ga pake audio, Dan bener audio emphasize the feelings sih.'
+              pake audio, kedua ga pake audio, Dan bener audio emphasize the feelings sih.',
               'Gue suka banget visual 
               di chapter 2! Berasa marahnya.`,
               by: "Firnita, Author of 'Strings Attached' & 'Shorter Stories' ",

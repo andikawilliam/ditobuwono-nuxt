@@ -119,7 +119,7 @@ export default Vue.extend({
 <style scoped>
 .portfolios-main {
   width: 100%;
-  font-size: 4.5vw;
+  font-size: 3vw;
   color: rgba(0, 0, 0, 0.75);
 }
 
@@ -128,6 +128,12 @@ export default Vue.extend({
   opacity: 0;
   left: 50%;
   margin-top: 10%;
+}
+
+@media screen and (max-width: 1440px) {
+  .portfolios-main {
+    font-size: 4.5vw;
+  }
 }
 
 @media screen and (max-width: 1023px) {

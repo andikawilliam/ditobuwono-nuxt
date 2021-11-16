@@ -109,9 +109,17 @@ p {
 }
 
 .about-text {
-  font-size: 1.2vw;
+  font-size: 1vw;
   letter-spacing: 0.02em;
   line-height: 1.8em;
+}
+
+@media screen and (max-width: 1440px) {
+  .about-text {
+    font-size: 1.1vw;
+    letter-spacing: 0.01em;
+    line-height: 1.4em;
+  }
 }
 
 @media screen and (max-width: 1279px) {

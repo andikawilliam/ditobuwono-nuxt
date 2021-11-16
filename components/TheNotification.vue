@@ -2,7 +2,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div
     id="notification"
-    class="fixed w-5/6 lg:w-3/4 mx-auto left-0 right-0 bottom-2"
+    class="fixed w-5/6 lg:w-3/4 max-w-screen-lg mx-auto left-0 right-0 bottom-2"
     v-show="notifState && notifText"
   >
     <div class="py-3 px-3 sm:px-6 lg:px-10 bg-gray-dito rounded-xl">

@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheNav :headerColor="headerColor" />
-    <div class="pt-16">
+    <div class="max-w-screen-2xl mx-auto pt-16">
       <slot />
     </div>
     <TheNotification />

@@ -61,6 +61,7 @@ export default Vue.extend({
           role: 'Roles: Script Continuity, Still Photographer',
           accolades: [
           'MIP Awards Moving Image of the Year 2021',
+          'Official Selection Sinema Akhir Tahun 2021"
           'Official Selection Himafisi Film Festival 2021',
           'Top 20 Short Fiction Film Category Balimakarya Short Film & Documentary Festival 2021'
           ],

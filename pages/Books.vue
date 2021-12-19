@@ -28,7 +28,7 @@ declare interface Book {
   cover: string;
   title: string;
   detail: string;
-  reviews: { review: string[]; by: string }[];
+  reviews: { reviewText: string[]; by: string }[];
   accolades: string[];
 }
 
@@ -63,7 +63,15 @@ export default Vue.extend({
           the feelings that he has felt during his life until now.`,
           reviews: [
             {
-              review: [
+              reviewText: [
+                `This simple story is not as simple as it seems. 
+                Who knew that one moment, with one person, in a particular sudden place could take you through such an 
+                intense emotional journey?`,
+              ],
+              by: "Whiteboard Journal Bookshop",
+            },
+            {
+              reviewText: [
                 `Experience baru banget sih ini!!! Ada visual, ada teks, ada audio. Gue baca dua kali, pertama 
               pake audio, kedua ga pake audio. Dan bener audio emphasize the feelings sih.`,
                 `Gue suka banget visual 

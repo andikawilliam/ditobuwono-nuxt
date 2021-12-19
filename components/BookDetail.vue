@@ -11,14 +11,12 @@
         xl:text-3xl
       "
     >
-      <p
-        :key="review"
-        v-for="review in selectedBook.reviews[0].review"
-        class="pb-4"
-      >
-        "<span v-html="review"></span>"
-      </p>
-      <p class="italic">- {{ selectedBook.reviews[0].by }}</p>
+      <div class="mb-16" :key="review" v-for="review in selectedBook.reviews">
+        <p :key="text" v-for="text in review.reviewText" class="pb-4">
+          "<span v-html="text"></span>"
+        </p>
+        <p class="italic text-gray-dito-text">- {{ review.by }}</p>
+      </div>
     </div>
 
     <div class="grid sm:grid-cols-2 gap-12">

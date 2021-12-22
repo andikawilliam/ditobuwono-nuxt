@@ -77,7 +77,7 @@ export default Vue.extend({
                 `Gue suka banget visual 
               di chapter 2! Berasa marahnya.`,
               ],
-              by: "Firnita, Author of 'Strings Attached' & 'Shorter Stories' ",
+              by: "Firnita, Author of "Strings Attached" & "Shorter Stories" ",
             },
           ],
           accolades: [

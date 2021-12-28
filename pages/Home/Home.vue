@@ -1,7 +1,7 @@
 <template>
   <div
     id="home"
-    class="pb-28 pt-12 md:pt-16 md:pb-40 lg:pt-24 lg:pb-24 xl:pt-32"
+    class="pb-24 pt-12 md:pt-16 md:pb-32 lg:pt-24 lg:pb-24 xl:pt-32"
   >
     <div class="flex px-6 md:px-24">
       <div class="portfolios-main text-current text-left mx-auto">
@@ -138,7 +138,7 @@ export default Vue.extend({
 
 @media screen and (max-width: 1023px) {
   .portfolios-main {
-    font-size: 8vw;
+    font-size: 6vw;
   }
   .down-notice {
     margin-top: 15%;

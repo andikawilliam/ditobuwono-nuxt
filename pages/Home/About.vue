@@ -6,16 +6,17 @@
       md:px-16
       pb-16
       md:py-16
-      lg:px-24 lg:py-32 lg:pb-48
+      lg:px-24 lg:pt-32 lg:pb-48
+      xl:pb-28
     "
   >
     <div
       class="
         about-content
         image-container
-        pb-4
+        pb-10
         pt-8
-        lg:pb-0 lg:pt-8 lg:w-1/2 lg:mr-12
+        lg:pt-8 lg:w-1/2 lg:mr-12
         xl:mr-8
       "
     >
@@ -62,7 +63,7 @@ export default Vue.extend({
         `,
         `
           Completed his psychology study at Gadjah Mada University, currently Dito are
-          interested in working and developing more in the creative and research fields.</span>
+          interested in working and developing more in the creative and research fields.
         `,
       ],
     };
@@ -111,14 +112,13 @@ p {
 .about-text {
   font-size: 1vw;
   letter-spacing: 0.02em;
-  line-height: 1.8em;
 }
 
 @media screen and (max-width: 1440px) {
   .about-text {
     font-size: 1.1vw;
     letter-spacing: 0.01em;
-    line-height: 1.4em;
+    line-height: 1.8em;
   }
 }
 

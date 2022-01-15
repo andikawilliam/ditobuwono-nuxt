@@ -38,7 +38,13 @@
         />
       </div>
       <div
-        class="sidebar desktopbar sm:w-auto sm:h-auto transition-width"
+        class="
+          sidebar
+          desktopbar
+          sm:w-auto sm:h-auto
+          transition-width
+          whitespace-nowrap
+        "
         :class="[
           activeSidebar ? 'w-full' : 'w-0',
           headerColor === 'white' ? 'bg-gray-dito' : 'bg-gray-ivory',

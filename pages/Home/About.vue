@@ -7,7 +7,7 @@
       pb-16
       md:py-16
       lg:px-24 lg:pt-32 lg:pb-48
-      xl:pb-28
+      xl:pb-16
     "
   >
     <div

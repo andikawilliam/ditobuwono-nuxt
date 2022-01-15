@@ -1,10 +1,13 @@
 <template>
   <div>
     <TheNav :headerColor="headerColor" />
-    <div class="max-w-screen-2xl mx-auto py-16">
+    <div class="max-w-screen-2xl mx-auto p-16">
       <slot />
     </div>
     <TheNotification />
+    <div class="mx-auto text-center mb-16 text-gray-dito-text xl:-mt-8">
+      <a href="mailto:hanindito.arief@gmail.com"> 📧 Contact Dito </a>
+    </div>
     <!-- <TheFooter /> -->
   </div>
 </template>

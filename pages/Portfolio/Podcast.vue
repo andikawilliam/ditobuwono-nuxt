@@ -1,12 +1,24 @@
 <template>
-  <div class="relative px-8 md:px-16 lg:px-20 pt-32 pb-16 sm:py-20 lg:py-40">
+  <div
+    class="
+      relative
+      px-8
+      md:px-16
+      lg:px-20
+      pt-32
+      pb-16
+      sm:py-20
+      lg:pt-40
+      xl:pb-0
+    "
+  >
     <PortfolioHeading :title="title" :description="description" />
     <div class="lg:w-2/3 mx-auto">
       <div class="podcast-grid-container w-full">
         <div
           v-for="podcast in podcasts"
           :key="podcast.id"
-          class="podcast-grid mb-16 grayscale"
+          class="podcast-grid grayscale"
         >
           <transition name="podcast-fade">
             <div
@@ -70,21 +82,21 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import PortfolioHeading from '../../components/PortfolioHeading.vue'
+import Vue from "vue";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import PortfolioHeading from "../../components/PortfolioHeading.vue";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 export default Vue.extend({
-  name: 'Podcast',
+  name: "Podcast",
   components: {
-    PortfolioHeading
+    PortfolioHeading,
   },
-  data () {
+  data() {
     return {
-      title: 'talks',
+      title: "talks",
       description: `
         Dito started his own podcast in 2018 with 
         <span class="italic">Dara Dan Pemuda</span>,
@@ -102,74 +114,74 @@ export default Vue.extend({
         {
           id: 1,
           show: false,
-          name: 'EksotisMerauke',
-          type: 'spotify',
+          name: "EksotisMerauke",
+          type: "spotify",
           src: [
-            'https://open.spotify.com/embed-podcast/episode/4t7sqCp8WUWrBPQMxxIwn9',
-            'https://open.spotify.com/embed-podcast/episode/0Yi88NzUtsbTtoWTAFIRCM',
-            'https://open.spotify.com/embed-podcast/episode/1EHnsS90cf8GrxbxWPtwj6',
-            'https://open.spotify.com/embed-podcast/episode/14fE8Q1JiaXRwm9LQAPuSX',
-            'https://open.spotify.com/embed-podcast/episode/28yLAnbOHFlNOq5zMIh6V7',
-            'https://open.spotify.com/embed-podcast/episode/1RUbojWjWv4wnDLESMbcq7',
-            'https://open.spotify.com/embed-podcast/episode/3mnaUMwIP0Sa3wmB71psFc'
+            "https://open.spotify.com/embed-podcast/episode/4t7sqCp8WUWrBPQMxxIwn9",
+            "https://open.spotify.com/embed-podcast/episode/0Yi88NzUtsbTtoWTAFIRCM",
+            "https://open.spotify.com/embed-podcast/episode/1EHnsS90cf8GrxbxWPtwj6",
+            "https://open.spotify.com/embed-podcast/episode/14fE8Q1JiaXRwm9LQAPuSX",
+            "https://open.spotify.com/embed-podcast/episode/28yLAnbOHFlNOq5zMIh6V7",
+            "https://open.spotify.com/embed-podcast/episode/1RUbojWjWv4wnDLESMbcq7",
+            "https://open.spotify.com/embed-podcast/episode/3mnaUMwIP0Sa3wmB71psFc",
           ],
-          active: 1
+          active: 1,
         },
         {
           id: 2,
           show: false,
-          name: 'Loka Bersua',
-          type: 'soundcloud',
+          name: "Loka Bersua",
+          type: "soundcloud",
           src: [
-            'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/440655900&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/440655900&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
           ],
-          active: 1
+          active: 1,
         },
         {
           id: 3,
           show: false,
-          name: 'Dara Dan Pemuda',
-          type: 'mixcloud',
+          name: "Dara Dan Pemuda",
+          type: "mixcloud",
           src: [
-            'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fbuvv%2Fdara-dan-pemuda-vol1%2F',
-            'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fbuvv%2Fdara-dan-pemuda-vol2%2F',
-            'https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fbuvv%2Fdara-dan-pemuda-vol4%2F'
+            "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fbuvv%2Fdara-dan-pemuda-vol1%2F",
+            "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fbuvv%2Fdara-dan-pemuda-vol2%2F",
+            "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fbuvv%2Fdara-dan-pemuda-vol4%2F",
           ],
-          active: 1
-        }
-      ]
-    }
+          active: 1,
+        },
+      ],
+    };
   },
-  mounted () {
+  mounted() {
     gsap.fromTo(
-      '.podcast-grid',
+      ".podcast-grid",
       { y: 50, autoAlpha: 0 },
       {
         scrollTrigger: {
-          trigger: '.podcast-grid-container',
-          start: 'top 80%',
-          end: '20% 30%',
-          toggleActions: 'play none none none'
+          trigger: ".podcast-grid-container",
+          start: "top 80%",
+          end: "20% 30%",
+          toggleActions: "play none none none",
         },
         y: 0,
         autoAlpha: 1,
         duration: 1,
-        stagger: 0.2
+        stagger: 0.2,
       }
-    )
+    );
   },
   methods: {
-    loopNext (id: number, length: number) {
-      const len = length
+    loopNext(id: number, length: number) {
+      const len = length;
       if (id > len) {
-        id = 1
+        id = 1;
       } else if (id < 1) {
-        id = len
+        id = len;
       }
-      return id
-    }
-  }
-})
+      return id;
+    },
+  },
+});
 </script>
 
 <style scoped>

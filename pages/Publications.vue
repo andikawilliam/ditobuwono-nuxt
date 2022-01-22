@@ -1,6 +1,6 @@
 <template>
   <Main class="bg-scroll bg-publications" headerColor="white">
-    <div class="relative px-8 md:px-20 lg:px-20 pb-40 xl:right-12">
+    <div class="relative px-8 md:px-20 lg:px-20 xl:pb-0 xl:right-12">
       <div class="text-white text-left mx-auto">
         <div
           v-for="publisher in publishers"

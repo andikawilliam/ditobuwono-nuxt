@@ -1,6 +1,6 @@
 <template>
   <Main>
-    <div class="relative px-8 lg:px-12 pt-8 pb-32 sm:pb-20 lg:pb-40">
+    <div class="relative px-8 lg:px-12 pt-8 pb-8 sm:pb-20 xl:pb-0">
       <transition name="fade">
         <BookDetail key="1" v-if="selectedBook" :selected-book="selectedBook" />
       </transition>

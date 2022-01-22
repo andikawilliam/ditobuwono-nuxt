@@ -75,7 +75,7 @@ export default Vue.extend({
           role: "Role: Director",
           accolades: [
             "Best Documentary October Edition Feel The Reel International Film Festival 2020",
-            "Top 25 Short Documentaries Recommended by Associations from Festival Film Indonesia 2021",
+            "Top 25 Short Documentaries Recommended by the Associations from Festival Film Indonesia 2021",
             "Official Selection Feel The Reel International Film Festival 2020",
             "Official Selection Lift-Off Global Network First-Time Filmmaker Sessions 2020",
             "Official Selection Lift-Off Global Network Lift-Off Sessions 2020",

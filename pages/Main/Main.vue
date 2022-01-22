@@ -5,7 +5,7 @@
       <slot />
     </div>
     <TheNotification />
-    <div class="mx-auto text-center pb-16 underline">
+    <div class="mx-auto text-center pb-24 underline">
       <a href="mailto:hanindito.arief@gmail.com">Contact Dito </a>
     </div>
     <!-- <TheFooter /> -->

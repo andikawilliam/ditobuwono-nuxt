@@ -3,7 +3,7 @@
     class="
       lg:flex lg:justify-center lg:items-center
       px-8
-      md:px-16
+      md:px-0
       pb-16
       md:py-16
       lg:px-24 lg:pt-32 lg:pb-48

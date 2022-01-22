@@ -1,7 +1,7 @@
 <template>
   <div
     :id="filmId"
-    class="film-container font-cormorant pb-12 lg:pb-16 xl:pb-32"
+    class="film-container font-cormorant pb-8 lg:pb-12 xl:pt-16"
   >
     <a :href="href" target="_blank" rel="noopener noreferrer">
       <div class="film-content text-shadow" v-on:click="showText = false">
@@ -12,7 +12,9 @@
             :icon="['fas', 'play-circle']"
           /> -->
         </div>
-        <div class="absolute text-right right-0 bottom-0 px-2 py-1 lg:px-4 lg:py-2"></div>
+        <div
+          class="absolute text-right right-0 bottom-0 px-2 py-1 lg:px-4 lg:py-2"
+        ></div>
       </div>
       <p class="title-text text-center font-semibold opacity-75 pt-2">
         {{ title }}

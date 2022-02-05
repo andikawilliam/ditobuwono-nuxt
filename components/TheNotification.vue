@@ -86,6 +86,8 @@ export default Vue.extend({
 
 <style scoped>
 #notification {
+  opacity: 0;
+  visibility: hidden;
   overflow: hidden;
   font-size: 0.9em;
 }

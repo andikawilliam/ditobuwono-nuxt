@@ -18,7 +18,7 @@
         <div
           v-for="podcast in podcasts"
           :key="podcast.id"
-          class="podcast-grid grayscale"
+          class="podcast-grid grayscale mb-12"
         >
           <transition name="podcast-fade">
             <div

@@ -3,7 +3,12 @@
     <div
       v-for="book in books"
       :key="book.id"
-      class="px-0 sm:mb-10 sm:flex-none sm:w-1/2 sm:px-4 xl:w-1/3 xl:px-10"
+      class="
+        px-0
+        mb-32
+        sm:mb-10 sm:flex-none sm:w-1/2 sm:px-4
+        xl:w-1/3 xl:px-10
+      "
     >
       <div
         class="cover-container relative shadow-sm cursor-pointer"

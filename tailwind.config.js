@@ -1,5 +1,23 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enable: true,
+    content: ["./public/**/*.html", "./src/**/*.html", "./src/**/*.vue"],
+    // These options are passed through directly to PurgeCSS
+    options: {
+      safelist: [
+        "md:row-span-1",
+        "md:row-span-2",
+        "md:row-span-3",
+        "md:row-span-4",
+        "md:row-span-5",
+        "md:col-span-1",
+        "md:col-span-2",
+        "md:col-span-3",
+        "md:col-span-4",
+        "md:col-span-5",
+      ],
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {

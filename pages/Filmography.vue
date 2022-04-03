@@ -64,6 +64,7 @@ export default Vue.extend({
             "In Competition Ganesha Film Festival 2022",
             "In Competition Malang Film Festival 2022",
             "Official Selection Parade Film MMTC #8 2022",
+            "Official Selection GELORA (Gebyar Eksplorasi Sineas Muda) 2022",
             "Official Selection Sinema Akhir Tahun 2021",
             "Official Selection Himafisi Film Festival 2021",
             "Top 20 Short Fiction Film Category Balimakarya Short Film & Documentary Festival 2021",

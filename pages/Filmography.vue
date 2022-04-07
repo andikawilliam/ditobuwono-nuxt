@@ -63,6 +63,7 @@ export default Vue.extend({
             "MIP Awards Moving Image of the Year 2021",
             "In Competition Ganesha Film Festival 2022",
             "In Competition Malang Film Festival 2022",
+            "Official Selection Minikino Indonesia Raja 2022",
             "Official Selection Parade Film MMTC #8 2022",
             "Official Selection GELORA (Gebyar Eksplorasi Sineas Muda) 2022",
             "Official Selection Sinema Akhir Tahun 2021",

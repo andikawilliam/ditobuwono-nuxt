@@ -13,7 +13,7 @@
           <div
             v-for="article in publisher.articles"
             :key="article.title"
-            class="underline pt-2 pb-1"
+            class="underline pt-2 pb-1 text-opacity-75"
           >
             <a :href="article.link">
               {{ article.title }}

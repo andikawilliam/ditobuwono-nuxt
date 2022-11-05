@@ -37,6 +37,32 @@ export default Vue.extend({
   data() {
     return {
       publishers: [
+       {
+          id: 5,
+          name: "MyEduSolve",
+          articles: [
+          {
+              title:
+                "Mengenal Bjorka dan Pentingnya Cyber Security Nasional",
+              link: "https://myedusolve.com/blog/mengenal-bjorka-dan-pentingnya-cyber-security-nasional",
+            },
+            {
+              title:
+                "Fenomena Quiet Quitting, Apakah Itu dan Mengapa Bisa Terjadi?",
+              link: "https://myedusolve.com/blog/fenomena-quiet-quitting-apakah-itu-dan-mengapa-bisa-terjadi",
+            },
+            {
+              title:
+                "Jarang Diketahui, Kenali 5 Tanda Kamu Mengalami Burnout",
+              link: "https://myedusolve.com/blog/jarang-diketahui-kenali-5-tanda-kamu-mengalami-burnout",
+            },
+            {
+              title:
+                "Hustle Culture, Pengertian dan Cara Menghindarinya",
+              link: "https://myedusolve.com/blog/hustle-culture-pengertian-dan-cara-menghindarinya",
+            },
+          ],
+        },
         {
           id: 4,
           name: "Jurnal Psikologi",
@@ -63,6 +89,11 @@ export default Vue.extend({
           id: 2,
           name: "Whiteboard Journal",
           articles: [
+            {
+              title:
+                "Terkadang yang kita perlukan hanya kerja secukupnya",
+              link: "https://www.whiteboardjournal.com/column/terkadang-yang-kita-perlukan-hanya-kerja-secukupnya/",
+            },
             {
               title:
                 "Database Ketersediaan Oksigen, Hingga Pendampingan Isolasi Mandiri, Kami Merangkum Inisiatif Warga untuk Membantu Kita Menghadapi Pandemi",

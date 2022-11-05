@@ -16,14 +16,14 @@
           class="absolute text-right right-0 bottom-0 px-2 py-1 lg:px-4 lg:py-2"
         ></div>
       </div>
-      <p class="title-text text-center font-semibold opacity-75 pt-2">
+      <p class="title-text md:text-center font-semibold opacity-75 pt-2">
         {{ title }}
       </p>
-      <p class="role-text text-center font-medium opacity-75 lg:pb-2">
+      <p class="role-text md:text-center font-medium opacity-75 lg:pb-2">
         {{ role }}
       </p>
       <p
-        class="accolade-text text-center font-light"
+        class="accolade-text md:text-center font-light"
         v-for="accolade in accolades"
         :key="accolade"
       >

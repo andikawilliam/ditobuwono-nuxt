@@ -128,13 +128,13 @@ export default Vue.extend({
 
 @media screen and (max-width: 960px) {
   .title-text {
-    font-size: 4vw;
+    font-size: 4.2vw;
   }
   .role-text {
-    font-size: 3vw;
+    font-size: 3.4vw;
   }
   .accolade-text {
-    font-size: 2.4vw;
+    font-size: 2.6vw;
     margin: 0.06em 0;
   }
   .text-shadow {

@@ -131,10 +131,10 @@ export default Vue.extend({
     font-size: 4vw;
   }
   .role-text {
-    font-size: 2.6vw;
+    font-size: 3vw;
   }
   .accolade-text {
-    font-size: 2vw;
+    font-size: 2.4vw;
     margin: 0.06em 0;
   }
   .text-shadow {

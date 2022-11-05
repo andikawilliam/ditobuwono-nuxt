@@ -134,7 +134,7 @@ export default Vue.extend({
     font-size: 2.6vw;
   }
   .accolade-text {
-    font-size: 1.8vw;
+    font-size: 2vw;
     margin: 0.06em 0;
   }
   .text-shadow {

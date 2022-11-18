@@ -69,10 +69,9 @@ export default Vue.extend({
       // to turn off change notifState to : false
       notifState: true,
       notifText: `
-        "Because the End Is Really
-        the Beginning" book is available now!
+        Checkout the latest publications by Dito
       `,
-      notifLink: "https://linktr.ee/EndIsBeginning",
+      notifLink: "https://ditobuwono.com/publications",
     };
   },
   methods: {

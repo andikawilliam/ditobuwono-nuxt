@@ -28,11 +28,6 @@
       <div class="text-lg sm:text-xl font-light xl:pt-16 lg:px-12">
         <h1 class="text-3xl sm:text-4xl mb-6">{{ selectedBook.title }}</h1>
         <p>{{ selectedBook.detail }}</p>
-        <a :href="selectedBook.link">
-          <button class="mt-4 underline text-purple-600 hover:opacity-80">
-            Get it now
-          </button>
-        </a>
         <div class="mt-4 text-gray-dito-text">
           <div
             class="italic font-light pb-1"

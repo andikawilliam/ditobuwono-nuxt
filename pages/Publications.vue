@@ -91,7 +91,7 @@ export default Vue.extend({
           articles: [
             {
               title:
-                "Terkadang yang kita perlukan hanya kerja secukupnya",
+                "Terkadang yang Kita Perlukan Hanya Kerja Secukupnya",
               link: "https://www.whiteboardjournal.com/column/terkadang-yang-kita-perlukan-hanya-kerja-secukupnya/",
             },
             {

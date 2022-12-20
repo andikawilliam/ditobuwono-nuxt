@@ -8,7 +8,7 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Hanindito Buwono',
-    meta: [Hanindito Buwono is a Filmmaker and Writer. Based in Jakarta, Indonesia.],
+    meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Hanindito Buwono is a Filmmaker and Writer. Based in Jakarta, Indonesia.' }

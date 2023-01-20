@@ -43,6 +43,11 @@ export default Vue.extend({
           articles: [
           {
               title:
+                "3 Cara Menghilangkan Garis Merah di Word Secara Mudah",
+              link: "https://myedusolve.com/blog/3-cara-menghilangkan-garis-merah-di-word-secara-mudah",
+          },
+          {
+              title:
                 "Mengenal Bjorka dan Pentingnya Cyber Security Nasional",
               link: "https://myedusolve.com/blog/mengenal-bjorka-dan-pentingnya-cyber-security-nasional",
             },

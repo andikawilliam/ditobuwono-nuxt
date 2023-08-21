@@ -37,6 +37,17 @@ export default Vue.extend({
   data() {
     return {
       publishers: [
+      {
+          id: 6,
+          name: "Wonderwhy",
+          articles: [
+            {
+              title:
+                "Rejecting Aging: Reflecting Upon the Decline of the Human Population Southeast Asia",
+              link: "https://www.wonderwhysea.com/detail/rejecting-aging-reflecting-upon-the-decline-of-the-human-population?utm_campaign=later-linkinbio-wonderwhysea&utm_content=later-37295462&utm_medium=social&utm_source=linkin.bio",
+            },
+          ],
+        },
        {
           id: 5,
           name: "MyEduSolve",

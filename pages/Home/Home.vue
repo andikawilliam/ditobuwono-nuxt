@@ -10,7 +10,7 @@
             Hanindito Buwono is a
             <span class="text-typed text-black" />
           </p>
-          <p class="main-text">He is based in Jakarta, Indonesia.</p>
+          <p class="main-text">He is from Jakarta, Indonesia.</p>
         </div>
         <!-- <font-awesome-icon
           class="text-lg sm:text-xl lg:text-32xl down-notice animate-bounce"

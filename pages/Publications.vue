@@ -43,7 +43,7 @@ export default Vue.extend({
           articles: [
             {
               title:
-                "Rejecting Aging: Reflecting Upon the Decline of the Human Population Southeast Asia",
+                "Rejecting Aging: Reflecting Upon the Decline of the Human Population",
               link: "https://www.wonderwhysea.com/detail/rejecting-aging-reflecting-upon-the-decline-of-the-human-population?utm_campaign=later-linkinbio-wonderwhysea&utm_content=later-37295462&utm_medium=social&utm_source=linkin.bio",
             },
           ],

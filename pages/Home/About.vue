@@ -62,8 +62,8 @@ export default Vue.extend({
           <span class="">the meaning of human beings.</span>
         `,
         `
-          Completed his psychology study at Gadjah Mada University, currently Dito are
-          interested in working and developing more in the creative and research fields.
+          Dito is currently pursuing a master's degree at the University of Gothenburg 
+          to explore his interest in media and sustainability research fields.
         `,
       ],
     };

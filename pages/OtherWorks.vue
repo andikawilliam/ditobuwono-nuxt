@@ -12,7 +12,7 @@ import Music from "./Portfolio/Music.vue";
 import Podcast from "./Portfolio/Podcast.vue";
 
 export default Vue.extend({
-  name: "OtherWorks",
+  name: "Audio",
   components: {
     Main,
     Music,

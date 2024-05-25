@@ -38,7 +38,7 @@ declare interface BaseComponentData {
 }
 
 export default Vue.extend({
-  name: "Books",
+  name: "Book",
   components: {
     Main,
     BookDetail,

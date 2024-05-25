@@ -87,15 +87,15 @@ export default Vue.extend({
       menus: [
         {
           to: "/filmography",
-          text: "Films",
+          text: "Film",
         },
         {
           to: "/books",
-          text: "Books",
+          text: "Book",
         },
         {
           to: "/publications",
-          text: "Publications",
+          text: "Publication",
         },
         {
           to: "/otherworks",

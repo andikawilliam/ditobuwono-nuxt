@@ -98,7 +98,7 @@ export default Vue.extend({
           text: "Publication",
         },
         {
-          to: "/audio",
+          to: "/otherworks",
           text: "Audio",
         },
       ],

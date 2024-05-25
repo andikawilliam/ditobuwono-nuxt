@@ -63,7 +63,7 @@ export default Vue.extend({
         `,
         `
           Dito is currently pursuing a master's degree at the University of Gothenburg 
-          to explore his interest in sustainability research fields.
+          to explore his interest in climate communications and sustainability fields.
         `,
       ],
     };

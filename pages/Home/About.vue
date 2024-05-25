@@ -52,12 +52,12 @@ export default Vue.extend({
         `
           During his creative process, Dito always raises
           <span class="">the meaning of honesty and hope</span>
-          from a sense of loss. Because, according to him, those feeling
+          from a sense of loss. Because according to him, those feelings
           <span class="">depict a complete human figure.</span>
         `,
         `
           This concept has evolved into one of Dito's intellectual quests,
-          <span class="">a testament his insatiable curiosity and open-mindedness.</span>
+          <span class="">a testament to his insatiable curiosity and open-mindedness.</span>
           He seeks to delve into various mediums, each offering a unique perspective,
           <span class="">in his ongoing endeavor to capture and preserve the essence of human existence.</span>
         `,

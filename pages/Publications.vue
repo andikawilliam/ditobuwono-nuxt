@@ -30,7 +30,7 @@ import Vue from "vue";
 import Main from "./Main/Main.vue";
 
 export default Vue.extend({
-  name: "Publications",
+  name: "Publication",
   components: {
     Main,
   },

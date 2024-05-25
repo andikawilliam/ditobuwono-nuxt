@@ -50,16 +50,16 @@ export default Vue.extend({
       picture: require("~/assets/dito-picture-3.jpeg"),
       texts: [
         `
-          In the course of his creative process, Dito always raises
+          During his creative process, Dito always raises
           <span class="">the meaning of honesty and hope</span>
-          from a sense of loss. Because according to him, those feeling are
-          <span class="">depiction of a complete human figure.</span>
+          from a sense of loss. Because, according to him, those feeling
+          <span class="">depict a complete human figure.</span>
         `,
         `
-          This idea developed into one of Dito's quests to
-          <span class="">explore different perspectives</span>
-          from different mediums, which later could describe and preserve
-          <span class="">the meaning of human beings.</span>
+          This concept has evolved into one of Dito's intellectual quests,
+          <span class="">a testament his insatiable curiosity and open-mindedness.</span>
+          He seeks to delve into various mediums, each offering a unique perspective,
+          <span class="">in his ongoing endeavor to capture and preserve the essence of human existence.</span>
         `,
         `
           Dito is currently pursuing a master's degree at the University of Gothenburg 

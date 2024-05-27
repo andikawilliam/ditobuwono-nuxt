@@ -54,7 +54,7 @@ export default Vue.extend({
       { autoAlpha: 1, y: -20, duration: 0.5 }
     );
 
-    const textArr = ["Multimedia Specialist."];
+    const textArr = ["Multimedia Specialist.","Researcher."];
 
     const getAnimFromIndex = (index: number) => ({
       duration: 1.5,

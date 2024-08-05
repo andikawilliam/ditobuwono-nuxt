@@ -149,6 +149,13 @@ export default Vue.extend({
           ],
           active: 1,
         },
+        {
+          id: 4,
+          show: false,
+          name: "Raoul Wallenberg Institute: On Human Rights Podcast",
+          type: "soundcloud",
+          src: [
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1886374002&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
       ],
     };
   },

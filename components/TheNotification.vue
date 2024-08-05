@@ -69,7 +69,7 @@ export default Vue.extend({
       // to turn off change notifState to : false
       notifState: true,
       notifText: `
-        Check out the latest talks and mixtape by Dito
+        Check out the latest talks by Dito in the Raoul Wallenberg Institute: On Human Rights Podcast here
       `,
       notifLink: "https://www.ditobuwono.com/otherworks",
     };

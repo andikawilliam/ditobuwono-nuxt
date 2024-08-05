@@ -69,9 +69,9 @@ export default Vue.extend({
       // to turn off change notifState to : false
       notifState: true,
       notifText: `
-        Check out the latest publications by Dito
+        Check out the latest talks and mixtape by Dito
       `,
-      notifLink: "https://ditobuwono.com/publications",
+      notifLink: "https://www.ditobuwono.com/otherworks",
     };
   },
   methods: {

@@ -112,6 +112,11 @@ export default Vue.extend({
             },
             {
               title:
+              "Finding Solutions During a Pandemic Through Five Designers at the Online Talk Event DOOR to ASIA"
+              link: "https://www.whiteboardjournal.com/ideas/design/finding-solutions-during-a-pandemic-through-five-designers-at-the-online-talk-event-door-to-asia/"
+            },
+            {
+              title:
                 "Database Ketersediaan Oksigen, Hingga Pendampingan Isolasi Mandiri, Kami Merangkum Inisiatif Warga untuk Membantu Kita Menghadapi Pandemi",
               link: "https://www.whiteboardjournal.com/ideas/human-interest/database-ketersediaan-oksigen-hingga-pendampingan-isolasi-mandiri-kami-merangkum-inisiatif-warga-untuk-membantu-kita-menghadapi-pandemi/",
             },

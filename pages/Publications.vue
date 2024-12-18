@@ -112,8 +112,8 @@ export default Vue.extend({
             },
             {
               title:
-              "Finding Solutions During a Pandemic Through Five Designers at the Online Talk Event DOOR to ASIA"
-              link: "https://www.whiteboardjournal.com/ideas/design/finding-solutions-during-a-pandemic-through-five-designers-at-the-online-talk-event-door-to-asia/"
+                "Finding Solutions During a Pandemic Through Five Designers at the Online Talk Event DOOR to ASIA",
+              link: "https://www.whiteboardjournal.com/ideas/design/finding-solutions-during-a-pandemic-through-five-designers-at-the-online-talk-event-door-to-asia/",
             },
             {
               title:

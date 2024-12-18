@@ -57,6 +57,11 @@ export default Vue.extend({
                 "3 Cara Menghilangkan Garis Merah di Word Secara Mudah",
               link: "https://myedusolve.com/blog/3-cara-menghilangkan-garis-merah-di-word-secara-mudah",
           },
+            {
+              title:
+                "Mudah! 4 Cara Menghapus Halaman Kosong di Word yang Tidak Bisa Dihapus",
+              link: "https://myedusolve.com/blog/4-cara-menghapus-halaman-kosong-di-word-secara-mudah",
+            },
           {
               title:
                 "Mengenal Bjorka dan Pentingnya Cyber Security Nasional",

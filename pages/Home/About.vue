@@ -62,8 +62,8 @@ export default Vue.extend({
           <span class="">in his ongoing endeavor to capture and preserve the essence of human existence.</span>
         `,
         `
-          Dito is currently pursuing a master's degree at the University of Gothenburg 
-          to explore his interest in climate communications and sustainability fields.
+          Dito is currently pursuing a master's degree at the University of Gothenburg to explore
+          his interest in climate communications and environmental social science research fields.
         `,
       ],
     };

@@ -38,6 +38,17 @@ export default Vue.extend({
     return {
       publishers: [
       {
+        id: 7,
+          name: "University of Gothenburg",
+          articles: [
+            {
+              title:
+                "Power and Stakeholders in IKN Nusantara: Land Use and Environmental Protection Discourse in Indonesia’s New Capital",
+              link: "https://gupea.ub.gu.se/handle/2077/88567",
+            },
+          ],
+        },
+       {
           id: 6,
           name: "Wonderwhy",
           articles: [

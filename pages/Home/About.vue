@@ -63,7 +63,7 @@ export default Vue.extend({
         `,
         `
           Dito has graduated with his master's degree in Political Science: Environmental Governance and Behavior
-          <span class="">from the University of Gothenburg and is looking to explore his interest in climate</span>
+          <span class="">at the University of Gothenburg and is looking to explore his interest in climate</span>
           and health policy advocacy.
         `,
       ],

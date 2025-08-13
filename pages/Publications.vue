@@ -39,7 +39,7 @@ export default Vue.extend({
       publishers: [
      {
         id: 9,
-          name: "Center for Indonesia’s Strategic Development Initiatives",
+          name: "Center for Indonesia’s Strategic Development Initiatives (CISDI)",
           articles: [
             {
               title:

@@ -37,7 +37,30 @@ export default Vue.extend({
   data() {
     return {
       publishers: [
-      {
+     {
+        id: 9,
+          name: "Center for Indonesia’s Strategic Development Initiatives (CISDI)",
+          articles: [
+            {
+              title:
+                "Gencarkan Imunisasi dan Edukasi Gizi, Kader Kesehatan Posyandu Anggur Berkunjung dari Rumah ke Rumah",
+              link: "https://cisdi.org/artikel/kader-kesehatan-posyandu-anggur",
+            },
+          ],
+        },
+        {
+        {
+        id: 8,
+          name: "Keluarga Berimun",
+          articles: [
+            {
+              title:
+                "Vaksin Polio: Apa Itu dan Prosedurnya",
+              link: "https://keluargaberimun.id/seputar-imunisasi/vaksin-polio-apa-itu-dan-prosedurnya",
+            },
+          ],
+        },
+        {
         id: 7,
           name: "University of Gothenburg",
           articles: [

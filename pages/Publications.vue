@@ -39,7 +39,7 @@ export default Vue.extend({
       publishers: [
      {
         id: 9,
-          name: "Center for Indonesia’s Strategic Development Initiatives (CISDI)",
+          name: "Center for Indonesia’s Strategic Development Initiatives",
           articles: [
             {
               title:
@@ -48,7 +48,6 @@ export default Vue.extend({
             },
           ],
         },
-        {
         {
         id: 8,
           name: "Keluarga Berimun",

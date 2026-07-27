@@ -45,6 +45,7 @@ export default Vue.extend({
            {
              title:
                "Nudging can strengthen Jakarta’s clean air policy",
+             link: "https://www.thejakartapost.com/opinion/2026/07/27/nudging-can-strengthen-jakartas-clean-air-policy?utm_source=(direct)&utm_medium=channel_opinion",
            }
            ],
        },

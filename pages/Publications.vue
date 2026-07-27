@@ -38,7 +38,18 @@ export default Vue.extend({
     return {
       publishers: [
      {
-        id: 9,
+       {
+       id: 10,
+         name: "The Jakarta Post",
+         articles: [
+           {
+             title:
+               "Nudging can strengthen Jakarta’s clean air policy",
+           }
+           ],
+       },
+        {
+       id: 9,
           name: "Center for Indonesia’s Strategic Development Initiatives (CISDI)",
           articles: [
             {
@@ -46,6 +57,11 @@ export default Vue.extend({
                 "Gencarkan Imunisasi dan Edukasi Gizi, Kader Kesehatan Posyandu Anggur Berkunjung dari Rumah ke Rumah",
               link: "https://cisdi.org/artikel/kader-kesehatan-posyandu-anggur",
             },
+            {
+              title: 
+                "Lewat Komunitas, CISDI Dorong Upaya Kurangi Dampak Polusi Udara di Kota Satelit",
+              link: "https://cisdi.org/siaran-pers/kurangi-polusi-udara-tangsel",
+            }
           ],
         },
         {

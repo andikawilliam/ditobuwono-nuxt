@@ -46,7 +46,7 @@ export default Vue.extend({
              title:
                "Nudging can strengthen Jakarta’s clean air policy",
              link: "https://www.thejakartapost.com/opinion/2026/07/27/nudging-can-strengthen-jakartas-clean-air-policy?utm_source=(direct)&utm_medium=channel_opinion",
-           }
+           },
            ],
        },
         {
@@ -62,7 +62,7 @@ export default Vue.extend({
               title: 
                 "Lewat Komunitas, CISDI Dorong Upaya Kurangi Dampak Polusi Udara di Kota Satelit",
               link: "https://cisdi.org/siaran-pers/kurangi-polusi-udara-tangsel",
-            }
+            },
           ],
         },
         {

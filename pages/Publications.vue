@@ -38,7 +38,6 @@ export default Vue.extend({
     return {
       publishers: [
      {
-       {
        id: 10,
          name: "The Jakarta Post",
          articles: [

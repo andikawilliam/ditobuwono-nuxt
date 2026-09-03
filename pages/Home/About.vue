@@ -1,7 +1,7 @@
 <template>
   <div
     class="
-      lg:flex lg:justify-center lg:items-center
+      lg:flex lg:flex-row lg:flex-nowrap lg:justify-center lg:items-start
       px-8
       md:px-0
       pb-16
@@ -16,16 +16,16 @@
         image-container
         pb-10
         pt-8
-        lg:pt-8 lg:w-1/2 lg:mr-12
-        xl:mr-8
+        lg:pt-7 lg:w-1/2 lg:mr-12
+        xl:mr-6
       "
     >
-      <img class="w-full md:w-1/2 lg:w-3/5 xl:w-1/2 mx-auto" :src="picture" />
+      <img class="w-full md:w-1/2 lg:w-4/5 xl:w-3/4 mx-auto" :src="picture" />
       <div class="font-cormorant mt-2 text-sm text-center lg:text-base">
         <span class="italic"> Photo by: Novianti N. </span>
       </div>
     </div>
-    <div class="about-content about-container mx-auto text-left">
+    <div class="about-content about-container mx-auto text-left lg:pt-7">
       <div
         class="about-text font-light md:font-normal md:opacity-75 text-current"
       >
@@ -98,8 +98,8 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-p {
-  padding-top: 1em;
+p + p {
+  padding-top: 16px;
 }
 
 .bolded {
@@ -111,23 +111,32 @@ p {
 }
 
 .about-text {
+  --about-lh: 1.8;
   font-size: 1vw;
+  line-height: var(--about-lh);
   letter-spacing: 0.02em;
+}
+
+/* A <p> box starts above its letters: line-height adds half-leading over the
+   first line. The photo has no such slack, so trim it here instead of trying
+   to match it with padding. */
+.about-text > p:first-child {
+  margin-top: calc((1 - var(--about-lh)) * 0.5em);
 }
 
 @media screen and (max-width: 1440px) {
   .about-text {
+    --about-lh: 1.8;
     font-size: 1.1vw;
     letter-spacing: 0.01em;
-    line-height: 1.8em;
   }
 }
 
 @media screen and (max-width: 1279px) {
   .about-text {
+    --about-lh: 1.4;
     font-size: 1.5vw;
     letter-spacing: 0.01em;
-    line-height: 1.4em;
   }
 }
 
@@ -137,9 +146,9 @@ p {
   }
 
   .about-text {
+    --about-lh: 1.5;
     font-size: 2.2vw;
     letter-spacing: 0.03em;
-    line-height: 1.5em;
   }
   .about-line {
     border-top: 3.5px solid currentColor;
@@ -152,9 +161,9 @@ p {
   }
 
   .about-text {
+    --about-lh: 1.5;
     font-size: 4.3vw;
     letter-spacing: 0.03em;
-    line-height: 1.5em;
   }
   .about-line {
     border-top: 3.5px solid currentColor;

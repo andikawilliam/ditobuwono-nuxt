@@ -47,7 +47,7 @@ export default Vue.extend({
   data() {
     return {
       title: "About",
-      picture: require("~/assets/dito-picture-3.jpeg"),
+      picture: require("~/assets/dito-picture-4.jpeg"),
       texts: [
         `
           During his creative process, Dito always raises

@@ -8,7 +8,10 @@
         <div class="font-playfair-display">
           <p class="main-text">
             Hanindito Buwono is a
-            <span class="text-typed text-black" />
+            <span class="typed-slot">
+              <span class="typed-ghost" aria-hidden="true">{{ longestText }}</span>
+              <span class="text-typed text-black" />
+            </span>
           </p>
           <p class="main-text">He is from Jakarta, Indonesia.</p>
         </div>
@@ -40,6 +43,17 @@ if (isMobile) {
 
 export default Vue.extend({
   name: "Home",
+  data() {
+    return {
+      textArr: ["Communications Specialist.", "Media Specialist."],
+    };
+  },
+  computed: {
+    // The ghost reserves room for the longest phrase, so the line never reflows.
+    longestText(): string {
+      return this.textArr.reduce((a, b) => (b.length > a.length ? b : a), "");
+    },
+  },
   mounted() {
     const tl = gsap.timeline();
     tl.fromTo(
@@ -54,7 +68,7 @@ export default Vue.extend({
       { autoAlpha: 1, y: -20, duration: 0.5 }
     );
 
-    const textArr = ["Communications Specialist.","Media Specialist."];
+    const textArr = this.textArr;
 
     const getAnimFromIndex = (index: number) => ({
       duration: 1.5,
@@ -128,6 +142,37 @@ export default Vue.extend({
   opacity: 0;
   left: 50%;
   margin-top: 10%;
+}
+
+/* Below lg the phrase is allowed to wrap as before. */
+.typed-slot {
+  display: inline;
+}
+
+.typed-ghost {
+  display: none;
+}
+
+/* Desktop: hold a fixed slot the width of the longest phrase and paint the
+   animated text over it, so typing/deleting never changes the line count. */
+@media screen and (min-width: 1024px) {
+  .typed-slot {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .typed-ghost {
+    display: inline;
+    visibility: hidden;
+  }
+
+  .text-typed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: 1440px) {

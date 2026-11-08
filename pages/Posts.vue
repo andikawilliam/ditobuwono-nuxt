@@ -17,7 +17,10 @@
         >
           <div class="row-head">
             <h2 class="row-name">{{ account.name }}</h2>
-            <div v-if="account.posts.length > 2" class="row-controls">
+            <div
+              v-if="account.posts.length + (account.profile ? 1 : 0) > 2"
+              class="row-controls"
+            >
               <button
                 type="button"
                 class="row-btn"
@@ -57,6 +60,20 @@
                 </span>
               </a>
             </li>
+            <li v-if="account.profile" class="track-item">
+              <a
+                :href="account.profile"
+                class="card card-more"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="card-index">{{ handle(account.profile) }}</span>
+                <span class="card-title">
+                  More from {{ account.name }} on Instagram
+                </span>
+                <span class="card-kind">See the profile</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -82,6 +99,7 @@ export default Vue.extend({
       accounts: [
         {
           name: "CISDI",
+          profile: "https://www.instagram.com/cisdi_id/",
           posts: [
             {
               title:
@@ -97,6 +115,7 @@ export default Vue.extend({
         },
         {
           name: "TRACK SDGs",
+          profile: "https://www.instagram.com/track.sdgs/",
           posts: [
             {
               title:
@@ -112,6 +131,7 @@ export default Vue.extend({
         },
         {
           name: "Pencerah Nusantara",
+          // Add a profile link here to show the "More on Instagram" card for this account.
           posts: [
             {
               title:
@@ -132,6 +152,7 @@ export default Vue.extend({
         },
         {
           name: "Primary Healthcare Impact Lab",
+          profile: "https://www.instagram.com/phcimpactlab/",
           posts: [
             {
               title:
@@ -152,6 +173,7 @@ export default Vue.extend({
         },
         {
           name: "Raoul Wallenberg Institute",
+          profile: "https://www.instagram.com/raoulwallenberginst/",
           posts: [
             {
               title:
@@ -187,6 +209,7 @@ export default Vue.extend({
         },
         {
           name: "MyEduSolve",
+          profile: "https://www.instagram.com/myedusolve/",
           posts: [
             {
               title:
@@ -247,6 +270,11 @@ export default Vue.extend({
     });
   },
   methods: {
+    // Turns a profile link into its @handle, e.g. https://www.instagram.com/cisdi_id/ becomes @cisdi_id.
+    handle(profile: string): string {
+      const parts = profile.split("/").filter(Boolean);
+      return "@" + parts[parts.length - 1];
+    },
     // Reels have /reel/ in their link, everything else is a post.
     isReel(link: string): boolean {
       return link.includes("/reel/");
@@ -366,13 +394,15 @@ export default Vue.extend({
   scroll-snap-align: start;
 }
 
-/* 4:5 portrait, the shape of an Instagram feed post. */
+/* At least 4:5 portrait (16rem by 20rem), the shape of an Instagram feed post.
+   A min-height instead of aspect-ratio, so stretching a card taller never widens it. */
 .card {
   flex: 1;
+  min-width: 0;
+  min-height: 20rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  aspect-ratio: 4 / 5;
   padding: 1.25rem;
   color: white;
   text-decoration: none;
@@ -381,9 +411,31 @@ export default Vue.extend({
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+/* The last card in a row links to the account's profile: outlined instead of filled. */
+.card-more {
+  color: #262626;
+  background: transparent;
+  border: 1px solid #262626;
+}
+
+.card-more .card-index,
+.card-more .card-kind {
+  color: #767676;
+}
+
 .card:hover {
   background: #393939;
   transform: translateY(-3px);
+}
+
+.card-more:hover {
+  color: white;
+  background: #262626;
+}
+
+.card-more:hover .card-index,
+.card-more:hover .card-kind {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .card:active {

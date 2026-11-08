@@ -94,6 +94,10 @@ export default Vue.extend({
           text: "Book",
         },
         {
+          to: "/posts",
+          text: "Posts",
+        },
+        {
           to: "/publications",
           text: "Publication",
         },
